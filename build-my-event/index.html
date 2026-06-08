@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ES6H4X61J9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ES6H4X61J9');
+</script>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Plan My Event — Reset Talents LLC</title>
+<meta name="description" content="Select the services your event needs. Bundle 3+ services to unlock automatic savings. Reset Talents handles everything."/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Reset Talents LLC"/>
+<meta property="og:title" content="Plan My Event — Reset Talents LLC"/>
+<meta property="og:description" content="Select your event services and get one personalized quote. DJ, lighting, staff, transport, venues and more. Bundle 3+ services and save."/>
+<meta property="og:image" content="https://resettalents.com/assets/logo-full.png"/>
+<meta property="og:url" content="https://resettalents.com/build-my-event"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Plan My Event — Reset Talents LLC"/>
+<meta name="twitter:description" content="Select your event services and get one personalized quote. DJ, lighting, staff, transport, venues and more. Bundle 3+ services and save."/>
+<meta name="twitter:image" content="https://resettalents.com/assets/logo-full.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/style.css"/>
+<link rel="icon" href="/assets/logo-icon.png" type="image/png"/>
+<link rel="apple-touch-icon" href="/assets/logo-icon.png"/>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo"><img src="/assets/logo-icon.png" alt="Reset Talents" style="height:40px;width:auto;object-fit:contain;mix-blend-mode:screen"/></a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about" class="nav-link">About</a>
+    <a href="/talent" class="nav-link">Talent</a>
+    <a href="/venues" class="nav-link">Venues</a>
+    <a href="/past-events" class="nav-link">Past Events</a>
+    <a href="/contact" class="nav-link">Contact</a>
+    <button class="nav-cta" onclick="rtShowCart()">Plan My Event <span id="rt-nav-badge" style="background:var(--rg);color:#141111;border-radius:50%;width:16px;height:16px;font-size:9px;display:inline-flex;align-items:center;justify-content:center;font-weight:600;margin-left:4px">0</span></button>
+  </div>
+  <button class="nav-hamburger" id="rt-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div id="rt-mobile-menu" class="nav-mobile-menu">
+  <a href="/" class="nav-mobile-link">Home</a>
+  <a href="/about" class="nav-mobile-link">About</a>
+  <a href="/talent" class="nav-mobile-link">Talent</a>
+  <a href="/venues" class="nav-mobile-link">Venues</a>
+  <a href="/past-events" class="nav-mobile-link">Past Events</a>
+  <a href="/contact" class="nav-mobile-link">Contact</a>
+  <a href="/dj-mixes" class="nav-mobile-link">DJ Mixes</a>
+  <a href="/build-my-event" class="nav-mobile-cta">Plan My Event ↗</a>
+</div>
+
+<!-- Sound System Modal -->
+<div class="modal-overlay hidden" id="soundModal">
+  <div class="modal">
+    <div class="modal-header"><div class="modal-title">Select your <em>Sound System</em></div><button class="modal-close" onclick="rtCloseModal('sound')">✕</button></div>
+    <div class="modal-body">
+      <p class="modal-sub">Choose the sound equipment you need. We'll confirm availability and quote each one.</p>
+      <div class="opt-row" id="rt-so-pa" onclick="rtToggleOpt('sound','pa')"><div class="or-left"><div class="or-emoji">🔊</div><div><div class="or-name">PA System</div><div class="or-desc">Full speaker system, subwoofer & on-site audio tech</div></div></div><div class="or-check" id="rt-sc-pa">✓</div></div>
+      <div class="opt-row" id="rt-so-monitor" onclick="rtToggleOpt('sound','monitor')"><div class="or-left"><div class="or-emoji">🎛️</div><div><div class="or-name">Stage Monitors</div><div class="or-desc">On-stage monitor speakers for performers</div></div></div><div class="or-check" id="rt-sc-monitor">✓</div></div>
+      <div class="opt-row" id="rt-so-mic" onclick="rtToggleOpt('sound','mic')"><div class="or-left"><div class="or-emoji">🎙️</div><div><div class="or-name">Wireless Microphones</div><div class="or-desc">Handheld or lapel wireless mic systems</div></div></div><div class="or-check" id="rt-sc-mic">✓</div></div>
+    </div>
+    <div class="modal-footer"><button class="btn-g" onclick="rtCloseModal('sound')">Cancel</button><button class="btn-p" onclick="rtConfirmModal('sound')">Add to Build ↗</button></div>
+  </div>
+</div>
+
+<!-- Transport Modal -->
+<div class="modal-overlay hidden" id="rtTransModal">
+  <div class="modal">
+    <div class="modal-header"><div class="modal-title">Select your <em>Transport</em></div><button class="modal-close" onclick="rtCloseModal('transport')">✕</button></div>
+    <div class="modal-body">
+      <p class="modal-sub">Choose one or more transport options. We'll confirm availability and quote each one.</p>
+      <div class="opt-row" id="rt-to-limo" onclick="rtToggleOpt('transport','limo')"><div class="or-left"><div class="or-emoji">🚗</div><div><div class="or-name">Limo Service</div><div class="or-desc">Stretch limo for VIP arrivals and wedding parties</div></div></div><div class="or-check" id="rt-tc-limo">✓</div></div>
+      <div class="opt-row" id="rt-to-sprinter" onclick="rtToggleOpt('transport','sprinter')"><div class="or-left"><div class="or-emoji">🚐</div><div><div class="or-name">Sprinter Van</div><div class="or-desc">Luxury Mercedes Sprinter, up to 14 passengers</div></div></div><div class="or-check" id="rt-tc-sprinter">✓</div></div>
+      <div class="opt-row" id="rt-to-shuttle" onclick="rtToggleOpt('transport','shuttle')"><div class="or-left"><div class="or-emoji">🚌</div><div><div class="or-name">Shuttle Service</div><div class="or-desc">Multi-trip guest shuttle for larger groups</div></div></div><div class="or-check" id="rt-tc-shuttle">✓</div></div>
+    </div>
+    <div class="modal-footer"><button class="btn-g" onclick="rtCloseModal('transport')">Cancel</button><button class="btn-p" onclick="rtConfirmModal('transport')">Add to Build ↗</button></div>
+  </div>
+</div>
+
+<!-- Staff Modal -->
+<div class="modal-overlay hidden" id="rtStaffModal">
+  <div class="modal">
+    <div class="modal-header"><div class="modal-title">Select your <em>VIP Event Ambassadors</em></div><button class="modal-close" onclick="rtCloseModal('staff')">✕</button></div>
+    <div class="modal-body">
+      <p class="modal-sub">Choose the staff you need. Mix and match — we'll coordinate everyone.</p>
+      <div class="opt-row" id="rt-so-bartenders" onclick="rtToggleOpt('staff','bartenders')"><div class="or-left"><div class="or-emoji">🍸</div><div><div class="or-name">Bartenders</div><div class="or-desc">Elite VIP bartenders & mixologists</div></div></div><div class="or-check" id="rt-sc-bartenders">✓</div></div>
+      <div class="opt-row" id="rt-so-servers" onclick="rtToggleOpt('staff','servers')"><div class="or-left"><div class="or-emoji">🍽️</div><div><div class="or-name">Servers</div><div class="or-desc">Elite VIP servers for your event</div></div></div><div class="or-check" id="rt-sc-servers">✓</div></div>
+      <div class="opt-row" id="rt-so-hostess" onclick="rtToggleOpt('staff','hostess')"><div class="or-left"><div class="or-emoji">💼</div><div><div class="or-name">Hostess</div><div class="or-desc">Elite VIP hostesses — models & actors</div></div></div><div class="or-check" id="rt-sc-hostess">✓</div></div>
+      <div class="opt-row" id="rt-so-ambassadors" onclick="rtToggleOpt('staff','ambassadors')"><div class="or-left"><div class="or-emoji">📋</div><div><div class="or-name">Ambassadors</div><div class="or-desc">Elite VIP brand ambassadors — models & actors</div></div></div><div class="or-check" id="rt-sc-ambassadors">✓</div></div>
+    </div>
+    <div class="modal-footer"><button class="btn-g" onclick="rtCloseModal('staff')">Cancel</button><button class="btn-p" onclick="rtConfirmModal('staff')">Add to Build ↗</button></div>
+  </div>
+</div>
+
+<div id="rt-view-shop" class="view active">
+  <div class="shop-header">
+    <div class="eyebrow" style="margin-bottom:5px">Plan My Event</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--rgs)">Select services. <em style="color:var(--rgl)">The more you add, the more you save.</em></h1>
+    <p style="font-size:11px;color:var(--muted);margin-top:4px;font-weight:300">Bundle 3+ services to unlock automatic savings. We handle everything.</p>
+  </div>
+  <div class="savings-bar-wrap" id="rt-savingsBar">
+    <div class="savings-bar-text">🎉 <span id="rt-savingsText"></span></div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="savings-pw"><div class="savings-prog" id="rt-savingsProg" style="width:0%"></div></div>
+      <span class="savings-next-lbl" id="rt-savingsNext"></span>
+    </div>
+  </div>
+  <div class="filter-bar" id="rt-catBar"></div>
+  <div class="svc-grid" id="rt-svcGrid"></div>
+  <div class="sticky-cart">
+    <div class="sc-left">
+      <div class="sc-count"><strong id="rt-cartCount">0</strong> services added</div>
+      <div class="sc-savings" id="rt-scSavings"></div>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="btn-g" onclick="rtShowCart()">View Build</button>
+      <button class="btn-p" onclick="rtShowCart()">Go to Build ↗</button>
+    </div>
+  </div>
+</div>
+
+<div id="rt-view-cart" class="view">
+  <div style="padding:1.25rem 1.5rem;background:var(--dark2);border-bottom:0.5px solid var(--border)">
+    <div class="eyebrow" style="margin-bottom:5px">Plan My Event</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--rgs)">Review your build & <em style="color:var(--rgl)">send your request.</em></h2>
+  </div>
+  <div id="rt-cartBody"></div>
+  <footer class="footer"><img src="/assets/logo-full.png" alt="Reset Talents" style="height:60px;width:auto;object-fit:contain;mix-blend-mode:screen"/><div class="footer-email">info@resettalents.com</div><div class="footer-est">Est. 2024</div>
+  <a href="/privacy" style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5a4a48;text-decoration:none">Privacy Policy</a></footer>
+</div>
+
+<div id="rt-view-success" class="view">
+  <div class="success-wrap">
+    <div class="success-icon-circle">✓</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--rgs);margin-bottom:8px">Request Sent!</h2>
+    <p style="font-size:12px;color:var(--muted);line-height:1.9;margin-bottom:1.5rem;font-weight:300">Your event build has been sent to <strong style="color:var(--rgl);font-weight:400">info@resettalents.com</strong>. We'll contact each vendor, confirm availability, and send you one full personalized quote.</p>
+    <div id="rt-successSavings"></div>
+    <div style="background:var(--dark2);border:0.5px solid var(--border);border-radius:6px;padding:1.25rem;margin:1rem 0;text-align:left">
+      <div class="eyebrow" style="margin-bottom:10px">What happens next</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:10px"><div style="width:20px;height:20px;border-radius:50%;border:0.5px solid var(--rgd);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--rg);flex-shrink:0">1</div><div style="font-size:11px;color:var(--muted);font-weight:300;line-height:1.5">We contact each vendor to confirm availability for your date</div></div>
+        <div style="display:flex;gap:10px"><div style="width:20px;height:20px;border-radius:50%;border:0.5px solid var(--rgd);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--rg);flex-shrink:0">2</div><div style="font-size:11px;color:var(--muted);font-weight:300;line-height:1.5">We collect quotes and apply your bundle savings</div></div>
+        <div style="display:flex;gap:10px"><div style="width:20px;height:20px;border-radius:50%;border:0.5px solid var(--rgd);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--rg);flex-shrink:0">3</div><div style="font-size:11px;color:var(--muted);font-weight:300;line-height:1.5">You receive one full transparent quote — no surprises</div></div>
+        <div style="display:flex;gap:10px"><div style="width:20px;height:20px;border-radius:50%;border:0.5px solid var(--rgd);display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--rg);flex-shrink:0">4</div><div style="font-size:11px;color:var(--muted);font-weight:300;line-height:1.5">You confirm — we coordinate everything, you enjoy your event</div></div>
+      </div>
+    </div>
+    <button class="btn-p" onclick="rtStartOver()">Plan Another Event ↗</button>
+  </div>
+  <footer class="footer"><img src="/assets/logo-full.png" alt="Reset Talents" style="height:60px;width:auto;object-fit:contain;mix-blend-mode:screen"/><div class="footer-email">info@resettalents.com</div><div class="footer-est">Est. 2024</div>
+  <a href="/privacy" style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5a4a48;text-decoration:none">Privacy Policy</a></footer>
+</div>
+
+<script>
+const rtServices=[
+  {id:1,cat:"DJ",name:"DJ",desc:"Professional DJ — featuring Rhenalt Rimpel and world-class artists",img:"https://images.unsplash.com/photo-1571266028243-d220c6a7c869?w=400&q=80",badge:"Popular"},
+  {id:2,cat:"Live Musician",name:"Live Musician",desc:"Live musician — Seoyeon Im and other world-class artists available for your event",img:"/assets/live-musician.jpg"},
+  {id:3,cat:"Sound System",name:"Sound System",desc:"PA system, stage monitors, wireless mics — select your needs",emoji:"🔊",badge:"Options",isParent:true,modalId:"soundModal"},
+  {id:4,cat:"Lighting",name:"Lighting Service",desc:"Stage lighting, uplighting, spotlights, LED, gobo & atmospheric effects",img:"/assets/lighting-service.jpg"},
+  {id:5,cat:"Video",name:"Videographer",desc:"Full coverage and cinematic highlight reel",emoji:"🎬"},
+  {id:6,cat:"Video",name:"Photographer",desc:"Professional event photography",emoji:"📷"},
+  {id:7,cat:"Video",name:"Photo Booth",desc:"Unlimited prints and digital gallery",emoji:"📸",badge:"Fun"},
+  {id:8,cat:"Security",name:"Licensed Security",desc:"Bonded guards for entry and guest safety",emoji:"🛡️"},
+  {id:9,cat:"Security",name:"VIP Entry Management",desc:"Red carpet, velvet rope and guest list",emoji:"🎟️"},
+  {id:10,cat:"VIP Event Ambassadors",name:"VIP Event Ambassadors",desc:"Bartenders, servers, hostess or coordinator",emoji:"👥",badge:"Options",isParent:true,modalId:"staffModal"},
+  {id:11,cat:"Transport",name:"Transportation",desc:"Limo, Sprinter Van or Shuttle",emoji:"🚗",badge:"Options",isParent:true,modalId:"transportModal"},
+  {id:12,cat:"Talent",name:"MC / Host",desc:"High-energy emcee to guide your event",emoji:"🎤",badge:"Popular"},
+  {id:13,cat:"Talent",name:"Live Performer",desc:"Specialty performers — dancers, aerialists & live acts tailored to your event",emoji:"🎭"},
+  {id:14,cat:"Talent",name:"Influencer & Content",desc:"Invite influencers to attend & create content — expand your reach before, during and after",emoji:"📱",badge:"New"},
+  {id:15,cat:"Venue",name:"Brass & The Tusk Bar",desc:"Art Deco landmark, NoMad NYC — 8–200+ guests",emoji:"🏛️",badge:"Partner"},
+  {id:16,cat:"Venue",name:"LouLou",desc:"French bistro & speakeasy, Chelsea NYC",emoji:"🥂",badge:"Partner"},
+  {id:17,cat:"Video",name:"JAF Visuals",desc:"Full event photography & videography by Jorge Andres Franco — JAF Visuals, NYC",emoji:"📷",badge:"Partner"},
+];
+const rtSub={sound:{options:{pa:{name:"PA System",emoji:"🔊",cat:"Sound System"},monitor:{name:"Stage Monitors",emoji:"🎛️",cat:"Sound System"},mic:{name:"Wireless Microphones",emoji:"🎙️",cat:"Sound System"}}},transport:{options:{limo:{name:"Limo Service",emoji:"🚗",cat:"Transport"},sprinter:{name:"Sprinter Van",emoji:"🚐",cat:"Transport"},shuttle:{name:"Shuttle Service",emoji:"🚌",cat:"Transport"}}},staff:{options:{bartenders:{name:"Bartenders",emoji:"🍸",cat:"VIP Event Ambassadors"},servers:{name:"Servers",emoji:"🍽️",cat:"VIP Event Ambassadors"},hostess:{name:"Hostess",emoji:"💼",cat:"VIP Event Ambassadors"},ambassadors:{name:"Ambassadors",emoji:"⭐",cat:"VIP Event Ambassadors"}}}};
+const rtTiers=[{min:1,max:2,label:"Standard",discount:0},{min:3,max:4,label:"Bundle Saver",discount:5},{min:5,max:6,label:"Event Package",discount:7},{min:7,max:9,label:"Full Production",discount:10},{min:10,max:999,label:"All-Inclusive",discount:15}];
+const rtCats=["All",...new Set(rtServices.map(s=>s.cat))];
+const rtBg={Sound:"#1c1508",Lighting:"#0e1a10",Video:"#0f0e1a",Security:"#1a0d0d",Staff:"#14100d",Transport:"#0d1418",Talent:"#1a0d14",Venue:"#0d0f18","Photo & Video":"#0a0a18","Tax & Finance":"#0a0c0a",Marketing:"#0c0a0a"};
+let rtCart={},rtSel={sound:{},transport:{},staff:{}};
+function rtGetTier(n){return rtTiers.find(t=>n>=t.min&&n<=t.max)||rtTiers[0];}
+function rtGetNext(n){return rtTiers.find(t=>t.min>n&&t.discount>0);}
+function rtCartSize(){return Object.keys(rtCart).length;}
+function rtOpenModal(type){
+  const cfg=rtSub[type];
+  const pfx=type==="sound"?"rt-so":type==="transport"?"rt-to":"rt-so";
+  const cpfx=type==="sound"?"rt-sc":type==="transport"?"rt-tc":"rt-sc";
+  Object.keys(cfg.options).forEach(k=>{
+    const r=document.getElementById(pfx+"-"+k),c=document.getElementById(cpfx+"-"+k);
+    if(r&&c){if(rtSel[type][k]){r.classList.add("selected");c.style.opacity="1";}else{r.classList.remove("selected");c.style.opacity="0.2";}}
+  });
+  document.getElementById(type==="sound"?"soundModal":type==="transport"?"rtTransModal":"rtStaffModal").classList.remove("hidden");
+}
+function rtCloseModal(type){document.getElementById(type==="sound"?"soundModal":type==="transport"?"rtTransModal":"rtStaffModal").classList.add("hidden");}
+function rtToggleOpt(type,key){
+  rtSel[type][key]=!rtSel[type][key];
+  const pfx=type==="sound"?"rt-so":type==="transport"?"rt-to":"rt-so";
+  const cpfx=type==="sound"?"rt-sc":type==="transport"?"rt-tc":"rt-sc";
+  const r=document.getElementById(pfx+"-"+key),c=document.getElementById(cpfx+"-"+key);
+  if(r&&c){if(rtSel[type][key]){r.classList.add("selected");c.style.opacity="1";}else{r.classList.remove("selected");c.style.opacity="0.2";}}
+}
+function rtConfirmModal(type){
+  const cfg=rtSub[type];
+  const prefix=type==="sound"?"snd-":type==="transport"?"t-":"s-";
+  Object.keys(cfg.options).forEach(k=>delete rtCart[prefix+k]);
+  Object.keys(rtSel[type]).forEach(k=>{if(rtSel[type][k]){const o=cfg.options[k];rtCart[prefix+k]={id:prefix+k,name:o.name,emoji:o.emoji,cat:o.cat};}});
+  rtCloseModal(type);rtUpdateUI();
+  const a=document.querySelector("#rt-catBar .f-btn.active")?.textContent||"All";rtRenderGrid(a);
+}
+function rtGroupInCart(type){const prefix=type==="sound"?"snd-":type==="transport"?"t-":"s-";return Object.keys(rtSub[type].options).some(k=>rtCart[prefix+k]);}
+function rtGroupLabel(type){const ch=Object.keys(rtSel[type]).filter(k=>rtSel[type][k]);if(!ch.length)return null;if(ch.length===1)return rtSub[type].options[ch[0]].name;return ch.length+" options";}
+function rtBuildCats(){document.getElementById("rt-catBar").innerHTML=rtCats.map((c,i)=>`<button class="f-btn${i===0?" active":""}" onclick="rtFilterCat('${c}',this)">${c}</button>`).join("");}
+function rtFilterCat(c,btn){document.querySelectorAll("#rt-catBar .f-btn").forEach(b=>b.classList.remove("active"));btn.classList.add("active");rtRenderGrid(c);}
+function rtRenderGrid(cat){
+  const items=cat==="All"?rtServices:rtServices.filter(s=>s.cat===cat);
+  document.getElementById("rt-svcGrid").innerHTML=items.map(s=>{
+    const type=s.modalId?s.modalId.replace("Modal",""):null;
+    const inC=type?rtGroupInCart(type):!!rtCart[s.id];
+    const lbl=type?rtGroupLabel(type):null;
+    const bc=type?(inC?"remove":"expand"):(inC?"remove":"add");
+    const bt=type?(inC?"✓ "+(lbl||"Selected")+" — Edit":"+ Select Options"):(inC?"✓ Added":"+ Add to Build");
+    const oc=type?`rtOpenModal('${type}')`:`rtToggleItem(${s.id})`;
+    const imgH=s.img?`<img src="${s.img}" alt="${s.name}">`:`<span style="font-size:28px">${s.emoji||"⭐"}</span>`;
+    return`<div class="svc-card${inC?" in-cart":""}"><div class="svc-img" style="background:${rtBg[s.cat]||"#1c1818"}">${s.badge?`<div class="svc-badge">${s.badge}</div>`:""}${imgH}</div><div class="svc-body"><div class="svc-cat">${s.cat}</div><div class="svc-name">${s.name}</div><div class="svc-desc">${s.desc}</div><button class="svc-btn ${bc}" onclick="${oc}">${bt}</button></div></div>`;
+  }).join("");
+}
+function rtToggleItem(id){const s=rtServices.find(x=>x.id===id);if(rtCart[id])delete rtCart[id];else rtCart[id]=s;rtUpdateUI();const a=document.querySelector("#rt-catBar .f-btn.active")?.textContent||"All";rtRenderGrid(a);}
+function rtUpdateUI(){
+  const n=rtCartSize(),tier=rtGetTier(n),next=rtGetNext(n);
+  document.getElementById("rt-cartCount").textContent=n;
+  document.getElementById("rt-nav-badge").textContent=n;
+  const sb=document.getElementById("rt-savingsBar");
+  sb.classList.toggle("show",n>0);
+  if(n>0){
+    const pct=next?Math.min(100,((n-tier.min)/(next.min-tier.min))*100):100;
+    document.getElementById("rt-savingsProg").style.width=pct+"%";
+    document.getElementById("rt-savingsText").textContent=tier.discount>0?`${tier.label} — ${tier.discount}% savings unlocked!`:`Add ${tier.max+1-n} more to unlock savings`;
+    document.getElementById("rt-savingsNext").textContent=next?`${next.min-n} more → ${next.discount}% off`:"Max savings!";
+  }
+  const sc=document.getElementById("rt-scSavings");
+  tier.discount>0?(sc.textContent=`${tier.discount}% savings`,sc.classList.add("show")):sc.classList.remove("show");
+}
+function rtShowShop(){document.getElementById("rt-view-shop").classList.add("active");document.getElementById("rt-view-cart").classList.remove("active");document.getElementById("rt-view-success").classList.remove("active");}
+function rtShowCart(){document.getElementById("rt-view-shop").classList.remove("active");document.getElementById("rt-view-cart").classList.add("active");document.getElementById("rt-view-success").classList.remove("active");rtRenderCartPage();}
+function rtRenderCartPage(){
+  const items=Object.values(rtCart),n=items.length,tier=rtGetTier(n),next=rtGetNext(n);
+  const body=document.getElementById("rt-cartBody");
+  if(n===0){body.innerHTML=`<div style="text-align:center;padding:3rem 2rem"><div style="font-size:32px;color:var(--rgd);margin-bottom:12px">🛒</div><h2 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--rgs);margin-bottom:8px">Your build is empty</h2><p style="font-size:12px;color:var(--muted);margin-bottom:1.5rem;font-weight:300">The more services you add, the more you save.</p><button class="btn-p" onclick="rtShowShop()">Browse Services ↗</button></div>`;return;}
+  const discH=tier.discount>0?`<div class="discount-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:6px"><div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:#7dd4a0">🎉 ${tier.label}</div><div style="font-size:9px;color:#141111;background:var(--green);padding:3px 8px;border-radius:2px;font-weight:500">${tier.discount}% Savings</div></div><div style="font-size:11px;color:#4a9e6a;font-weight:300">Bundle savings automatically applied to your quote.</div></div>`:next?`<div class="unlock-card"><div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rgd);margin-bottom:5px">Unlock Savings</div><div style="font-size:11px;color:var(--muted);font-weight:300">Add <strong style="color:var(--rgl);font-weight:400">${next.min-n} more service${next.min-n>1?"s":""}</strong> to unlock <strong style="color:var(--rgl);font-weight:400">${next.discount}% savings.</strong></div></div>`:"";
+  body.innerHTML=`<div class="cart-wrap"><div><div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--rgd);margin-bottom:1rem">Your build (${n})</div>${items.map(s=>`<div class="cart-item"><div class="ci-l"><div class="ci-e">${s.emoji||"⭐"}</div><div><div class="ci-n">${s.name}</div><div class="ci-c">${s.cat}</div></div></div><button class="ci-rm" onclick="rtRemoveItem('${s.id}')">✕</button></div>`).join("")}<button class="btn-g" style="width:100%;margin-top:10px" onclick="rtShowShop()">← Add More Services</button><div style="margin-top:1rem">${discH}</div></div><div><div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--rgd);margin-bottom:1rem">Your event details</div><div class="two-col" style="margin-bottom:0"><div><label class="cart-form-label">Name</label><input class="cart-input" id="rt-cName" placeholder="Full name" type="text"/></div><div><label class="cart-form-label">Email</label><input class="cart-input" id="rt-cEmail" placeholder="your@email.com" type="email"/></div><div><label class="cart-form-label">Event date</label><input class="cart-input" id="rt-cDate" type="date"/></div><div><label class="cart-form-label">Event type</label><select class="cart-input" id="rt-cType"><option value="" disabled selected>Select type</option><option>Wedding</option><option>Birthday Party</option><option>Corporate Event</option><option>Concert / Show</option><option>Club / Venue Night</option><option>Restaurant Entertainment</option><option>Other</option></select></div><div><label class="cart-form-label">Location</label><input class="cart-input" id="rt-cLocation" placeholder="Venue or city" type="text"/></div><div><label class="cart-form-label">Guest count</label><input class="cart-input" id="rt-cGuests" placeholder="Approx. number" type="text"/></div></div><label class="cart-form-label" style="margin-top:2px;display:block">Notes or special requests</label><textarea class="cart-input" id="rt-cNote" placeholder="Your vision, timing, special requests..."></textarea><div class="fee-box"><div class="fee-row"><span class="fee-lbl">Services in build</span><span class="fee-val">${n}</span></div><div class="fee-row"><span class="fee-lbl">Tier</span><span class="fee-val" style="color:${tier.discount>0?"#7dd4a0":"var(--rgl)"}">${tier.label}</span></div>${tier.discount>0?`<div class="fee-row"><span class="fee-lbl">Bundle savings</span><span class="fee-green">−${tier.discount}% on admin fee</span></div>`:""}<div class="fee-row"><span class="fee-lbl">Admin fee</span><span class="fee-val">5%${tier.discount>0?` (${tier.discount}% savings applied)`:""}</span></div><div class="fee-row"><span class="fee-lbl">Vendor quotes</span><span class="fee-val">Collected on your behalf</span></div><div class="fee-note">We contact every vendor, confirm availability, and send you <strong>one full quote</strong>. <strong>Vendors pay a 5% commission</strong> — your event fully managed at no extra effort to you.</div></div><button class="submit-btn" onclick="rtSubmitRequest()">Send My Event Request ↗</button></div></div>`;
+}
+function rtRemoveItem(id){delete rtCart[id];if(id.startsWith("snd-")){rtSel.sound[id.slice(4)]=false;}if(id.startsWith("t-")){rtSel.transport[id.slice(2)]=false;}if(id.startsWith("s-")){rtSel.staff[id.slice(2)]=false;}rtUpdateUI();rtRenderCartPage();}
+async function rtSubmitRequest(){
+  const name=document.getElementById("rt-cName")?.value.trim()||"",email=document.getElementById("rt-cEmail")?.value.trim()||"";
+  if(!name||!email){alert("Please enter your name and email.");return;}
+  const items=Object.values(rtCart);if(!items.length){alert("Please add at least one service.");return;}
+  const n=items.length,tier=rtGetTier(n);
+  const note=document.getElementById("rt-cNote")?.value||"None",date=document.getElementById("rt-cDate")?.value||"Not specified";
+  const type=document.getElementById("rt-cType")?.value||"Not specified",loc=document.getElementById("rt-cLocation")?.value||"Not specified";
+  const guests=document.getElementById("rt-cGuests")?.value||"Not specified";
+  const svcList=items.map(s=>`• ${s.name} (${s.cat})`).join("\n");
+  const tierLine=tier.discount>0?`${tier.label} — ${tier.discount}% bundle savings on admin fee`:"No bundle tier";
+  const summary=`NEW EVENT PLAN — Reset Talents\n\nCLIENT: ${name}\nEMAIL: ${email}\nEVENT TYPE: ${type}\nEVENT DATE: ${date}\nLOCATION: ${loc}\nGUESTS: ${guests}\n\nSERVICES (${n}):\n${svcList}\n\nBUNDLE TIER: ${tierLine}\nADMIN FEE: 5%${tier.discount>0?` (${tier.discount}% bundle discount applied)`:""}\n\nNOTES: ${note}\n\nAction: contact each vendor, confirm availability, send client one full itemized proposal.`;
+  const btn=document.querySelector(".submit-btn");
+  const btnLabel=btn?btn.textContent:"";
+  if(btn){btn.disabled=true;btn.textContent="Sending...";}
+  try{
+    const resp=await fetch("https://formspree.io/f/xjgdyrvw",{
+      method:"POST",
+      headers:{"Content-Type":"application/json","Accept":"application/json"},
+      body:JSON.stringify({
+        _subject:`New Event Plan — ${name} (${n} services)`,
+        name:name, email:email, event_type:type, event_date:date,
+        location:loc, guests:guests,
+        services:items.map(s=>`${s.name} (${s.cat})`).join(", "),
+        service_count:n, bundle_tier:tierLine, notes:note,
+        message:summary
+      })
+    });
+    if(!resp.ok){throw new Error("Bad response");}
+    if(typeof gtag!=="undefined"){gtag("event","generate_lead",{event_category:"Build My Event",event_label:type,value:n});}
+    const savMsg=tier.discount>0?`<div style="background:#0d1e10;border:0.5px solid var(--green-dark);border-radius:6px;padding:1rem;margin:1rem auto;max-width:400px"><div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7dd4a0;margin-bottom:4px">Bundle savings applied</div><div style="font-size:12px;color:#4a9e6a;font-weight:300">${tier.label} — ${tier.discount}% savings</div></div>`:"";
+    document.getElementById("rt-successSavings").innerHTML=savMsg;
+    rtCart={};rtSel={sound:{},transport:{},staff:{}};rtUpdateUI();
+    document.getElementById("rt-view-cart").classList.remove("active");
+    document.getElementById("rt-view-success").classList.add("active");
+  }catch(err){
+    if(btn){btn.disabled=false;btn.textContent=btnLabel||"Send My Event Request ↗";}
+    alert("Something went wrong sending your request. Please email us directly at info@resettalents.com and we'll take care of it.");
+  }
+}
+function rtStartOver(){document.getElementById("rt-view-success").classList.remove("active");document.getElementById("rt-view-shop").classList.add("active");rtBuildCats();rtRenderGrid("All");}
+rtBuildCats();rtRenderGrid("All");
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('rt-hamburger');
+  var menu=document.getElementById('rt-mobile-menu');
+  if(!btn||!menu)return;
+  btn.addEventListener('click',function(){btn.classList.toggle('open');menu.classList.toggle('open');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){btn.classList.remove('open');menu.classList.remove('open');});});
+})();
+</script>
+</body>
+</html>

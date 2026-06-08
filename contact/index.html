@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Contact — Reset Talents LLC</title>
+<meta name="description" content="Plan your event with Reset Talents. Tell us what you need — DJ, live music, VIP event ambassadors, venues, lighting, and more across the USA."/>
+<meta property="og:title" content="Contact Reset Talents — Plan My Event"/>
+<meta property="og:description" content="Tell us about your event. We handle everything — one email, one quote."/>
+<meta property="og:image" content="https://resettalents.com/assets/logo-full.png"/>
+<meta property="og:url" content="https://resettalents.com/contact"/>
+<meta property="og:site_name" content="Reset Talents LLC"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ES6H4X61J9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ES6H4X61J9');
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/style.css"/>
+<link rel="icon" href="/assets/logo-icon.png" type="image/png"/>
+<style>
+/* ── FORM STYLES ───────────────────────────────────────────── */
+.contact-wrap{
+  display:grid;
+  grid-template-columns:1fr 380px;
+  gap:0;
+  min-height:calc(100vh - 64px);
+}
+.contact-form-col{
+  padding:3.5rem 3rem;
+  border-right:0.5px solid var(--border);
+}
+.contact-info-col{
+  padding:3.5rem 2.5rem;
+  background:var(--dark2);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  gap:2rem;
+}
+.form-group{
+  margin-bottom:1.25rem;
+}
+.form-label{
+  display:block;
+  font-size:8px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--rgd);
+  margin-bottom:6px;
+}
+.form-label span{
+  color:var(--rgs);
+  margin-left:2px;
+}
+.form-input,
+.form-select,
+.form-textarea{
+  width:100%;
+  background:var(--dark2);
+  border:0.5px solid var(--border);
+  border-radius:3px;
+  color:var(--rgl);
+  font-family:'Jost',sans-serif;
+  font-size:11px;
+  font-weight:300;
+  padding:10px 14px;
+  outline:none;
+  transition:border-color 0.2s, background 0.2s;
+  box-sizing:border-box;
+  -webkit-appearance:none;
+  appearance:none;
+}
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus{
+  border-color:var(--rg);
+  background:rgba(201,149,122,0.04);
+}
+.form-input::placeholder,
+.form-textarea::placeholder{
+  color:rgba(178,158,148,0.3);
+}
+.form-select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23c9957a' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 12px center;
+  padding-right:32px;
+  cursor:pointer;
+}
+.form-textarea{
+  resize:vertical;
+  min-height:120px;
+  line-height:1.7;
+}
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+/* CHECKBOXES */
+.checkbox-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:6px;
+}
+.checkbox-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+}
+.checkbox-item input[type="checkbox"]{
+  width:14px;height:14px;
+  accent-color:var(--rg);
+  cursor:pointer;
+  flex-shrink:0;
+}
+.checkbox-item span{
+  font-size:10px;
+  color:var(--muted);
+  font-weight:300;
+  line-height:1.4;
+}
+/* SUBMIT */
+.form-submit{
+  width:100%;
+  background:linear-gradient(135deg,var(--rg),var(--rgd));
+  border:none;
+  border-radius:3px;
+  color:#141111;
+  font-family:'Jost',sans-serif;
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  padding:14px 24px;
+  cursor:pointer;
+  transition:opacity 0.2s, transform 0.1s;
+  margin-top:0.5rem;
+}
+.form-submit:hover{opacity:0.9;}
+.form-submit:active{transform:scale(0.99);}
+.form-submit:disabled{opacity:0.5;cursor:not-allowed;}
+
+/* SUCCESS STATE */
+#form-success{
+  display:none;
+  text-align:center;
+  padding:4rem 2rem;
+}
+/* ERROR */
+.field-error{
+  font-size:9px;
+  color:#e07a7a;
+  margin-top:4px;
+  display:none;
+}
+/* INFO COLUMN ITEMS */
+.info-item{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+.info-icon{
+  width:36px;height:36px;
+  border:0.5px solid var(--border);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;
+  flex-shrink:0;
+  margin-top:2px;
+}
+.info-label{
+  font-size:8px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--rgd);
+  margin-bottom:3px;
+}
+.info-val{
+  font-size:11px;color:var(--muted);
+  font-weight:300;line-height:1.6;
+}
+.response-badge{
+  background:rgba(201,149,122,0.08);
+  border:0.5px solid rgba(201,149,122,0.3);
+  border-radius:3px;
+  padding:10px 14px;
+  display:flex;align-items:center;gap:10px;
+}
+.rb-dot{
+  width:6px;height:6px;
+  border-radius:50%;
+  background:#4a9e6a;
+  flex-shrink:0;
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.rb-text{
+  font-size:9px;letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--rgl);
+}
+
+@media(max-width:900px){
+  .contact-wrap{grid-template-columns:1fr;direction:ltr}
+  .contact-form-col{padding:2.5rem 1.5rem;border-right:none;border-bottom:0.5px solid var(--border)}
+  .contact-info-col{padding:2rem 1.5rem}
+  .form-row{grid-template-columns:1fr}
+  .checkbox-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo"><img src="/assets/logo-icon.png" alt="Reset Talents" style="height:40px;width:auto;object-fit:contain;mix-blend-mode:screen"/></a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about" class="nav-link">About</a>
+    <a href="/talent" class="nav-link">Talent</a>
+    <a href="/venues" class="nav-link">Venues</a>
+    <a href="/past-events" class="nav-link">Past Events</a>
+    <a href="/contact" class="nav-link active">Contact</a>
+    <a href="/dj-mixes" class="nav-link">DJ Mixes</a>
+    <a href="/build-my-event" class="nav-cta">Plan My Event ↗</a>
+  </div>
+  <button class="nav-hamburger" id="rt-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div id="rt-mobile-menu" class="nav-mobile-menu">
+  <a href="/" class="nav-mobile-link">Home</a>
+  <a href="/about" class="nav-mobile-link">About</a>
+  <a href="/talent" class="nav-mobile-link">Talent</a>
+  <a href="/venues" class="nav-mobile-link">Venues</a>
+  <a href="/past-events" class="nav-mobile-link">Past Events</a>
+  <a href="/contact" class="nav-mobile-link active">Contact</a>
+  <a href="/dj-mixes" class="nav-mobile-link">DJ Mixes</a>
+  <a href="/build-my-event" class="nav-mobile-cta">Plan My Event ↗</a>
+</div>
+
+<main>
+  <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">Contact Reset Talents — Plan Your Event</h1>
+
+  <!-- PAGE HEADER -->
+  <div style="padding:3rem 3rem 2rem;border-bottom:0.5px solid var(--border);background:var(--dark)">
+    <div class="eyebrow" style="margin-bottom:8px">Let's make it happen</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,52px);font-weight:300;color:var(--rgs);margin-bottom:6px">Tell us about <em style="color:var(--rgl)">your event.</em></h2>
+    <p style="font-size:12px;color:var(--muted);font-weight:300;max-width:540px">Fill in what you know — even if you're still in the early stages. We'll respond within 24 hours with a quote tailored to your vision.</p>
+  </div>
+
+  <div class="contact-wrap">
+
+    <!-- ── FORM ────────────────────────────────────────────── -->
+    <div class="contact-form-col">
+
+      <!-- SUCCESS MESSAGE -->
+      <div id="form-success">
+        <div style="width:64px;height:64px;border:0.5px solid rgba(74,158,106,0.5);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 1.5rem">✓</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--rgs);margin-bottom:8px">Message received.</div>
+        <p style="font-size:12px;color:var(--muted);font-weight:300;line-height:1.9;margin-bottom:2rem">Thank you for reaching out to Reset Talents. We'll review your event details and get back to you within 24 hours with next steps.</p>
+        <a href="/" class="btn-g">← Back to Home</a>
+      </div>
+
+      <!-- THE FORM -->
+      <form id="contact-form" action="https://formspree.io/f/xjgdyrvw" method="POST" novalidate>
+
+        <!-- SECTION: Your Info -->
+        <div style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:0.5px solid var(--border)">
+          <div class="eyebrow" style="margin-bottom:1.25rem">Your Information</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="name">Full Name <span>*</span></label>
+              <input class="form-input" type="text" id="name" name="name" placeholder="Andre Watson" required autocomplete="name"/>
+              <div class="field-error" id="err-name">Please enter your name</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address <span>*</span></label>
+              <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email"/>
+              <div class="field-error" id="err-email">Please enter a valid email</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number <span style="color:var(--muted);font-size:7px;letter-spacing:1px">(optional)</span></label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+1 (212) 000-0000" autocomplete="tel"/>
+          </div>
+        </div>
+
+        <!-- SECTION: Event Details -->
+        <div style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:0.5px solid var(--border)">
+          <div class="eyebrow" style="margin-bottom:1.25rem">Event Details</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="event-type">Event Type <span>*</span></label>
+              <select class="form-select" id="event-type" name="event_type" required>
+                <option value="" disabled selected>Select event type</option>
+                <option>Corporate Event</option>
+                <option>Private Party</option>
+                <option>Gala</option>
+                <option>Birthday Celebration</option>
+                <option>Wedding Reception</option>
+                <option>Product Launch</option>
+                <option>Art Exhibition</option>
+                <option>Brand Activation</option>
+                <option>Networking Event</option>
+                <option>Holiday Party</option>
+                <option>Other</option>
+              </select>
+              <div class="field-error" id="err-event-type">Please select an event type</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="event-date">Event Date <span style="color:var(--muted);font-size:7px;letter-spacing:1px">(approximate is fine)</span></label>
+              <input class="form-input" type="date" id="event-date" name="event_date"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="guest-count">Estimated Guest Count</label>
+              <select class="form-select" id="guest-count" name="guest_count">
+                <option value="" disabled selected>Select guest count</option>
+                <option>Under 50 guests</option>
+                <option>50–100 guests</option>
+                <option>100–200 guests</option>
+                <option>200–300 guests</option>
+                <option>300+ guests</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="location">Event City / Location</label>
+              <input class="form-input" type="text" id="location" name="event_location" placeholder="New York City, NY"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION: Services -->
+        <div style="margin-bottom:2rem;padding-bottom:2rem;border-bottom:0.5px solid var(--border)">
+          <div class="eyebrow" style="margin-bottom:1.25rem">Services Interested In</div>
+          <div class="checkbox-grid">
+            <label class="checkbox-item"><input type="checkbox" name="services" value="DJ"/><span>DJ</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Live Musician"/><span>Live Musician</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Sound System"/><span>Sound System</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Lighting"/><span>Lighting</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Videographer / Photographer"/><span>Videographer / Photographer</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="VIP Event Ambassadors"/><span>VIP Event Ambassadors</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Venue"/><span>Venue</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Transportation"/><span>Transportation</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Security"/><span>Security</span></label>
+            <label class="checkbox-item"><input type="checkbox" name="services" value="Full Production Package"/><span>Full Production Package</span></label>
+          </div>
+        </div>
+
+        <!-- SECTION: Budget & Message -->
+        <div style="margin-bottom:2rem">
+          <div class="eyebrow" style="margin-bottom:1.25rem">Budget & Message</div>
+          <div class="form-group">
+            <label class="form-label" for="budget">Budget Range</label>
+            <select class="form-select" id="budget" name="budget_range">
+              <option value="" disabled selected>Select budget range</option>
+              <option>Under $2,500</option>
+              <option>$2,500 – $5,000</option>
+              <option>$5,000 – $10,000</option>
+              <option>$10,000 – $25,000</option>
+              <option>$25,000+</option>
+              <option>Flexible / Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Tell us about your event <span>*</span></label>
+            <textarea class="form-textarea" id="message" name="message" required
+              placeholder="Share any details that will help us understand your vision — theme, mood, special requirements, venue ideas, or anything else you have in mind..."></textarea>
+            <div class="field-error" id="err-message">Please tell us about your event</div>
+          </div>
+        </div>
+
+        <!-- How did you find us -->
+        <div class="form-group" style="margin-bottom:2rem">
+          <label class="form-label" for="referral">How did you find us? <span style="color:var(--muted);font-size:7px;letter-spacing:1px">(optional)</span></label>
+          <select class="form-select" id="referral" name="referral_source">
+            <option value="" disabled selected>Select an option</option>
+            <option>Google Search</option>
+            <option>Instagram</option>
+            <option>Referral from a friend</option>
+            <option>Past client</option>
+            <option>Venue recommendation</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <button type="submit" class="form-submit" id="submit-btn">
+          Send My Event Inquiry ↗
+        </button>
+
+        <p style="font-size:9px;color:var(--muted);font-weight:300;margin-top:12px;line-height:1.7;opacity:0.6">
+          By submitting this form you agree to be contacted by Reset Talents LLC regarding your event inquiry. We never share your information with third parties.
+        </p>
+
+      </form>
+    </div>
+
+    <!-- ── INFO COLUMN ──────────────────────────────────────── -->
+    <div class="contact-info-col">
+
+      <div>
+        <div class="eyebrow" style="margin-bottom:8px">Reset Talents LLC</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--rgs);line-height:1.2">Your Event.<br><em style="color:var(--rgl)">One Solution.</em></div>
+      </div>
+
+      <div class="response-badge">
+        <div class="rb-dot"></div>
+        <div class="rb-text">We respond within 24 hours</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1.25rem">
+        <div class="info-item">
+          <div class="info-icon">✉</div>
+          <div>
+            <div class="info-label">Email</div>
+            <a href="mailto:info@resettalents.com" style="color:var(--rgl);font-size:11px;text-decoration:none">info@resettalents.com</a>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label">Service Area</div>
+            <div class="info-val">New York City & Nationwide<br>USA · Internationally available</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🎯</div>
+          <div>
+            <div class="info-label">Services</div>
+            <div class="info-val">DJ · Live Music · Sound · Lighting<br>VIP Ambassadors · Venues · Transport<br>Security · Full Production</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🏆</div>
+          <div>
+            <div class="info-label">Experience</div>
+            <div class="info-val">25 years · 40 countries<br>500+ events produced</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:0.5px solid var(--border);padding-top:1.5rem">
+        <div class="eyebrow" style="margin-bottom:10px">Prefer to browse first?</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="/build-my-event" class="btn-p" style="text-align:center">Plan My Event ↗</a>
+          <a href="/talent" class="btn-g" style="text-align:center">View Talent Roster</a>
+          <a href="/venues" class="btn-g" style="text-align:center">Browse Venues</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <img src="/assets/logo-full.png" alt="Reset Talents" style="height:60px;width:auto;object-fit:contain;mix-blend-mode:screen"/>
+  <div class="footer-email">info@resettalents.com</div>
+  <div class="footer-est">Est. 2024</div>
+  <a href="/privacy" style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5a4a48;text-decoration:none">Privacy Policy</a>
+</footer>
+
+<script>
+// NAV
+(function(){
+  var btn=document.getElementById('rt-hamburger');
+  var menu=document.getElementById('rt-mobile-menu');
+  if(!btn||!menu)return;
+  btn.addEventListener('click',function(){btn.classList.toggle('open');menu.classList.toggle('open');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){btn.classList.remove('open');menu.classList.remove('open');});});
+})();
+
+// FORM VALIDATION & SUBMISSION
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  // Clear previous errors
+  document.querySelectorAll('.field-error').forEach(function(el){ el.style.display='none'; });
+
+  // Validate required fields
+  var valid = true;
+  var name  = document.getElementById('name').value.trim();
+  var email = document.getElementById('email').value.trim();
+  var type  = document.getElementById('event-type').value;
+  var msg   = document.getElementById('message').value.trim();
+
+  if(!name){ document.getElementById('err-name').style.display='block'; valid=false; }
+  if(!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    document.getElementById('err-email').style.display='block'; valid=false;
+  }
+  if(!type){ document.getElementById('err-event-type').style.display='block'; valid=false; }
+  if(!msg){ document.getElementById('err-message').style.display='block'; valid=false; }
+
+  if(!valid) return;
+
+  // Collect checked services
+  var services = Array.from(document.querySelectorAll('input[name="services"]:checked'))
+    .map(function(cb){ return cb.value; }).join(', ');
+
+  // Submit to Formspree
+  var btn = document.getElementById('submit-btn');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  try {
+    var formData = new FormData(this);
+    if(services) formData.set('services', services);
+
+    var resp = await fetch('https://formspree.io/f/xjgdyrvw', {
+      method:'POST',
+      body: formData,
+      headers:{ 'Accept':'application/json' }
+    });
+
+    if(resp.ok){
+      document.getElementById('contact-form').style.display='none';
+      document.getElementById('form-success').style.display='block';
+      // Fire GA event
+      if(typeof gtag !== 'undefined'){
+        gtag('event','form_submit',{ event_category:'Contact', event_label:'Event Inquiry' });
+      }
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Send My Event Inquiry ↗';
+      alert('Something went wrong. Please email us directly at info@resettalents.com');
+    }
+  } catch(err) {
+    btn.disabled = false;
+    btn.textContent = 'Send My Event Inquiry ↗';
+    alert('Network error. Please email us directly at info@resettalents.com');
+  }
+});
+</script>
+</body>
+</html>

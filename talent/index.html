@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ES6H4X61J9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ES6H4X61J9');
+</script>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Talent Roster — Reset Talents LLC</title>
+<meta name="description" content="Browse our curated roster of DJs, live musicians, photographers, videographers and performers. All personally vetted. Book through Reset Talents."/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Reset Talents LLC"/>
+<meta property="og:title" content="Talent Roster — Reset Talents LLC"/>
+<meta property="og:description" content="Browse our curated roster of DJs, live musicians, photographers and performers. All personally vetted. Book through Reset Talents."/>
+<meta property="og:image" content="https://resettalents.com/assets/logo-full.png"/>
+<meta property="og:url" content="https://resettalents.com/talent"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Talent Roster — Reset Talents LLC"/>
+<meta name="twitter:description" content="Browse our curated roster of DJs, live musicians, photographers and performers. All personally vetted. Book through Reset Talents."/>
+<meta name="twitter:image" content="https://resettalents.com/assets/logo-full.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/style.css"/>
+<link rel="icon" href="/assets/logo-icon.png" type="image/png"/>
+<link rel="apple-touch-icon" href="/assets/logo-icon.png"/>
+
+<style>
+@media(max-width:600px){
+  /* VIP card photo grid → single column */
+  #avp-photos .grid-2col,
+  #avp-photos [style*="grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr !important;
+  }
+  /* Talent page filter bar → wrap */
+  .filter-bar{flex-wrap:wrap !important;gap:4px !important;}
+  /* Talent cards → 2 columns on small screens */
+  [style*="grid-template-columns:repeat(auto-fill,minmax(210px"]{
+    grid-template-columns:repeat(2,1fr) !important;
+  }
+}
+@media(max-width:400px){
+  [style*="grid-template-columns:repeat(auto-fill,minmax(210px"]{
+    grid-template-columns:1fr !important;
+  }
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo"><img src="/assets/logo-icon.png" alt="Reset Talents" style="height:40px;width:auto;object-fit:contain;mix-blend-mode:screen"/></a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about" class="nav-link">About</a>
+    <a href="/talent" class="nav-link active">Talent</a>
+    <a href="/venues" class="nav-link">Venues</a>
+    <a href="/past-events" class="nav-link">Past Events</a>
+    <a href="/contact" class="nav-link">Contact</a>
+    <a href="/dj-mixes" class="nav-link">DJ Mixes</a>
+    <a href="/build-my-event" class="nav-cta">Plan My Event ↗</a>
+  </div>
+  <button class="nav-hamburger" id="rt-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div id="rt-mobile-menu" class="nav-mobile-menu">
+  <a href="/" class="nav-mobile-link">Home</a>
+  <a href="/about" class="nav-mobile-link">About</a>
+  <a href="/talent" class="nav-mobile-link active">Talent</a>
+  <a href="/venues" class="nav-mobile-link">Venues</a>
+  <a href="/past-events" class="nav-mobile-link">Past Events</a>
+  <a href="/contact" class="nav-mobile-link">Contact</a>
+  <a href="/dj-mixes" class="nav-mobile-link">DJ Mixes</a>
+  <a href="/build-my-event" class="nav-mobile-cta">Plan My Event ↗</a>
+</div>
+<main>
+  <div class="page-hero">
+    <div class="eyebrow" style="margin-bottom:8px">Our Roster</div>
+    <h1 class="page-title">World-Class Talent.<br><em>Personally Vetted.</em></h1>
+    <div class="hdiv"><div class="hl"></div><div class="hd"></div><div class="hlr"></div></div>
+    <p class="page-sub">Every artist in our network has been personally selected. Browse the roster — then add them to your event through Plan My Event.</p>
+  </div>
+
+  <div class="filter-bar" id="tCatBar">
+    <button class="f-btn active" onclick="fT('all',this)">All</button>
+    <button class="f-btn" onclick="fT('dj',this)">DJs</button>
+    <button class="f-btn" onclick="fT('live',this)">Live Music</button>
+    <button class="f-btn" onclick="fT('photo',this)">Photo & Video</button>
+    <button class="f-btn" onclick="fT('vip',this)">VIP Event Ambassadors</button>
+    <button class="f-btn" onclick="fT('performer',this)">Performers</button>
+  </div>
+
+  <!-- DJS -->
+  <section class="sec" id="cat-dj">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.5rem">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--rgs)">DJs</h2>
+      <div style="flex:1;height:0.5px;background:var(--border)"></div>
+      <div class="eyebrow">3 Artists</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem">
+      <div style="background:var(--card);border:0.5px solid var(--rg);border-radius:8px;overflow:hidden">
+        <div style="height:230px;position:relative;overflow:hidden;background:#1a0d0d">
+          <img src="/assets/rhenalt-1.jpg" alt="Rhenalt" style="width:100%;height:100%;object-fit:cover"/>
+          <div style="position:absolute;top:8px;left:8px;background:rgba(201,149,122,0.9);color:#141111;font-size:7px;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:2px;font-weight:500">Featured</div>
+          <div style="position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:#4a9e6a"></div>
+        </div>
+        <div style="padding:1rem">
+          <div class="eyebrow" style="margin-bottom:4px">DJ · Producer · Label Founder</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--rgs);margin-bottom:2px">Rhenalt Rimpel</div>
+          <div style="font-size:10px;color:var(--muted);margin-bottom:8px;font-weight:300">aka Rebel Eye · New York City</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px">
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Tech House</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Techno</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Tribal</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Afro</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Melodic</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Latin</span>
+          </div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.7;font-weight:300;margin-bottom:10px">Beatport Top 20. Nervous Records. Over a decade of international bookings across 3 continents.</p>
+          <a href="/talent/rhenalt-rimpel" class="btn-p" style="display:block;text-align:center;font-size:8px;padding:7px">View Full Profile ↗</a>
+        </div>
+      </div>
+      <div style="background:var(--card);border:0.5px solid var(--rg);border-radius:8px;overflow:hidden;position:relative">
+        <!-- Founder badge -->
+        <div style="position:absolute;top:0;left:0;right:0;background:linear-gradient(90deg,rgba(201,149,122,0.15),rgba(201,149,122,0.05));border-bottom:0.5px solid rgba(201,149,122,0.3);padding:4px 10px;display:flex;align-items:center;justify-content:space-between;z-index:2">
+          <span style="font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--rgl)">Founder · Reset Talents</span>
+          <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd)">48K Followers</span>
+        </div>
+        <div style="height:230px;position:relative;overflow:hidden;background:#0d0a10">
+          <img src="/assets/dj-watson.jpg" alt="Andre Watson DJ Watson"
+               style="width:100%;height:100%;object-fit:cover;object-position:center top"/>
+          <div style="position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:#4a9e6a"></div>
+        </div>
+        <div style="padding:1rem">
+          <div class="eyebrow" style="margin-bottom:4px">DJ · Founder · NYC</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--rgs);margin-bottom:2px">WATSON</div>
+          <div style="font-size:10px;color:var(--muted);margin-bottom:8px;font-weight:300">Andre Watson · New York City</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px">
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Afro</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Deep House</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Tribal</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Minimal</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Techno</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">House</span>
+          </div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.7;font-weight:300;margin-bottom:10px">Founder of Reset Talents and NYC underground DJ. 48K Instagram followers. 25 years of hospitality across 40 countries. Resident at NYC's top afterhours venues including HOHM Brooklyn. "Music is my life — from dusk till dawn."</p>
+          <a href="/talent/dj-watson" class="btn-p" style="display:block;text-align:center;font-size:8px;padding:7px">View Full Profile ↗</a>
+        </div>
+      </div>
+      <div style="background:var(--card);border:0.5px solid var(--rg);border-radius:8px;overflow:hidden">
+        <div style="height:230px;position:relative;overflow:hidden;background:#0d0a10">
+          <img src="/assets/nile-5.jpg" alt="Nile by Fire DJ Nile Stevens" style="width:100%;height:100%;object-fit:cover;object-position:center top"/>
+          <div style="position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:#4a9e6a"></div>
+        </div>
+        <div style="padding:1rem">
+          <div class="eyebrow" style="margin-bottom:4px">DJ · Event Curator · Bar Director</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--rgs);margin-bottom:2px">Nile by Fire</div>
+          <div style="font-size:10px;color:var(--muted);margin-bottom:8px;font-weight:300">Nile Stevens · Brooklyn, NY</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px">
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">House</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Dance</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Open Format</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Hip Hop</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">R&amp;B</span>
+          </div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.7;font-weight:300;margin-bottom:10px">Cross-genre selector with a sexy, fun, body-moving sound. Runs the monthly LMSS party at Speak Softly, beneath LouLou. 16+ years in hospitality; Bar Director at LouLou, Chelsea.</p>
+          <a href="/talent/nile-by-fire" class="btn-p" style="display:block;text-align:center;font-size:8px;padding:7px">View Full Profile ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIVE MUSIC -->
+  <section class="sec alt" id="cat-live">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.5rem">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--rgs)">Live Music</h2>
+      <div style="flex:1;height:0.5px;background:var(--border)"></div>
+      <div class="eyebrow">1 Artist</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem">
+      <div style="background:var(--card);border:0.5px solid var(--rg);border-radius:8px;overflow:hidden">
+        <div style="height:230px;position:relative;overflow:hidden;background:#0c0a12">
+          <img src="/assets/seoyeon-2.jpg" alt="Seoyeon Im" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"/>
+          <div style="position:absolute;top:8px;left:8px;background:rgba(26,24,24,0.9);border:0.5px solid var(--rgd);color:var(--rgl);font-size:7px;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:2px">Featured</div>
+          <div style="position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:#4a9e6a"></div>
+        </div>
+        <div style="padding:1rem">
+          <div class="eyebrow" style="margin-bottom:4px">Electric Violinist</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--rgs);margin-bottom:2px">Seoyeon Im</div>
+          <div style="font-size:10px;color:var(--muted);margin-bottom:8px;font-weight:300">Korean Jazz Violinist · New York City</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px">
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Jazz</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Gypsy Jazz</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Swing</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Classical</span>
+          </div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.7;font-weight:300;margin-bottom:10px">Korean jazz violinist based in NYC. Berklee & Queens College alum. Carnegie Hall debut. 90K+ followers, 40M+ views. Performs at NYC's top jazz clubs — Zinc Bar, Ornithology. Perfect for galas, weddings & high-end events.</p>
+          <a href="/talent/seoyeon-im" class="btn-p" style="display:block;text-align:center;font-size:8px;padding:7px">View Full Profile ↗</a>
+        </div>
+      </div>
+      <div style="background:var(--dark);border:0.5px dashed var(--border);border-radius:8px;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:2rem;text-align:center">
+        <div style="font-size:24px;color:var(--rgd)">+</div>
+        <div class="eyebrow">Bands, Sax, Piano & More</div>
+        <p style="font-size:10px;color:var(--muted);font-weight:300">Contact us for specific requests.</p>
+        <a href="/contact" class="btn-g" style="display:inline-block;margin-top:8px;font-size:8px;padding:6px 14px">Request ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO & VIDEO -->
+  <section class="sec" id="cat-photo">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.5rem">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--rgs)">Photo & Video</h2>
+      <div style="flex:1;height:0.5px;background:var(--border)"></div>
+      <div class="eyebrow">1 Partner</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem">
+      <div style="background:var(--card);border:0.5px solid var(--rg);border-radius:8px;overflow:hidden">
+        <div style="height:230px;background:#080a0c;overflow:hidden;position:relative">
+          <img src="/assets/jorge-franco.jpg" alt="Jorge Andres Franco - JAF Visuals" style="width:100%;height:100%;object-fit:cover;object-position:center top"/>
+          <div style="position:absolute;top:8px;left:8px;background:rgba(201,149,122,0.9);color:#141111;font-size:7px;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:2px;font-weight:500">Partner</div>
+          <div style="position:absolute;top:8px;right:8px;width:8px;height:8px;border-radius:50%;background:#4a9e6a"></div>
+        </div>
+        <div style="padding:1rem">
+          <div class="eyebrow" style="margin-bottom:4px">Photographer · Videographer · NYC</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--rgs);margin-bottom:2px">Jorge Andres Franco</div>
+          <div style="font-size:10px;color:var(--muted);margin-bottom:8px;font-weight:300">JAF Visuals · Queens, New York</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px">
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Events</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Portraits</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Commercial</span>
+            <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Videography</span>
+          </div>
+          <p style="font-size:10px;color:var(--muted);line-height:1.7;font-weight:300;margin-bottom:10px">NYC-based freelance photographer and videographer. Queens College alum. Covers events, portraits, and commercial campaigns — from Fanta brand launches to high-end galas. Full cinematic coverage, arrival to last moment.</p>
+          <a href="/talent/jorge-franco" class="btn-p" style="display:block;text-align:center;font-size:8px;padding:7px">View Full Profile ↗</a>
+        </div>
+      </div>
+      <div style="background:var(--dark);border:0.5px dashed var(--border);border-radius:8px;min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:2rem;text-align:center">
+        <div style="font-size:24px;color:var(--rgd)">+</div>
+        <div class="eyebrow">More Photo &amp; Video Partners</div>
+        <p style="font-size:10px;color:var(--muted);font-weight:300">Need a specific style or a shooter you already love? Contact us.</p>
+        <a href="/contact" class="btn-g" style="display:inline-block;margin-top:8px;font-size:8px;padding:6px 14px">Request ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIP EVENT AMBASSADORS -->
+  <section class="sec alt" id="cat-vip">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.5rem">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--rgs)">VIP Event Ambassadors</h2>
+      <div style="flex:1;height:0.5px;background:var(--border)"></div>
+      <div class="eyebrow">1 Ambassador</div>
+      <a href="/vip-ambassadors" class="btn-g" style="font-size:8px;padding:5px 12px">Full Roster ↗</a>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1rem">
+
+      <!-- ANDRE WATSON VIP CARD -->
+      <div style="background:var(--card);border:0.5px solid var(--rg);border-radius:8px;overflow:hidden;position:relative">
+
+        <!-- Founder banner -->
+        <div style="background:linear-gradient(90deg,rgba(201,149,122,0.15),rgba(201,149,122,0.05));border-bottom:0.5px solid rgba(201,149,122,0.3);padding:4px 10px;display:flex;align-items:center;justify-content:space-between;z-index:2">
+          <span style="font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--rgl)">Founder · Reset Talents</span>
+          <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd)">25 Yrs · 40 Countries</span>
+        </div>
+
+        <!-- MINI TABS -->
+        <div style="display:flex;border-bottom:0.5px solid var(--border);background:var(--dark)">
+          <button onclick="awVipTab('profile',this)" id="avt-profile"
+            style="flex:1;padding:6px 4px;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;background:none;border:none;border-bottom:1.5px solid var(--rg);color:var(--rgl);cursor:pointer;font-family:'Jost',sans-serif">Profile</button>
+          <button onclick="awVipTab('resume',this)" id="avt-resume"
+            style="flex:1;padding:6px 4px;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;background:none;border:none;border-bottom:1.5px solid transparent;color:var(--muted);cursor:pointer;font-family:'Jost',sans-serif">Resume</button>
+          <button onclick="awVipTab('photos',this)" id="avt-photos"
+            style="flex:1;padding:6px 4px;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;background:none;border:none;border-bottom:1.5px solid transparent;color:var(--muted);cursor:pointer;font-family:'Jost',sans-serif">Photos</button>
+          <button onclick="awVipTab('info',this)" id="avt-info"
+            style="flex:1;padding:6px 4px;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;background:none;border:none;border-bottom:1.5px solid transparent;color:var(--muted);cursor:pointer;font-family:'Jost',sans-serif">Staff Info</button>
+          <button onclick="awVipTab('referrals',this)" id="avt-referrals"
+            style="flex:1;padding:6px 4px;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;background:none;border:none;border-bottom:1.5px solid transparent;color:var(--muted);cursor:pointer;font-family:'Jost',sans-serif">Referrals</button>
+        </div>
+
+        <!-- TAB: PROFILE -->
+        <div id="avp-profile">
+          <div style="height:230px;position:relative;overflow:hidden;background:#0d090c">
+            <img src="/assets/andre-watson-vip.jpg" alt="Andre Watson VIP Ambassador"
+                 style="width:100%;height:100%;object-fit:cover;object-position:top center"/>
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(20,17,17,0.9),transparent);padding:0.75rem">
+              <div style="font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rgd)">VIP Event Ambassador</div>
+            </div>
+          </div>
+          <div style="padding:1rem">
+            <div class="eyebrow" style="margin-bottom:4px">Server · Bartender · Hostess · Ambassador</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--rgs);margin-bottom:2px">Andre Watson</div>
+            <div style="font-size:10px;color:var(--muted);margin-bottom:8px;font-weight:300">New York City · 25 Years Experience</div>
+            <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px">
+              <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Gucci</span>
+              <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Armani</span>
+              <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Tiffany & Co.</span>
+              <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Lacoste</span>
+              <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Galas</span>
+              <span style="font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:2px 6px;border-radius:2px">Art Exhibitions</span>
+            </div>
+            <p style="font-size:10px;color:var(--muted);line-height:1.7;font-weight:300;margin-bottom:10px">25 years of elite hospitality across 40 countries. VIP events for Gucci, Armani, Tiffany & Co., Lacoste, galas, and art exhibitions worldwide.</p>
+            <a href="/talent/dj-watson" class="btn-p" style="display:block;text-align:center;font-size:8px;padding:7px">View Full Profile ↗</a>
+          </div>
+        </div>
+
+        <!-- TAB: RESUME -->
+        <div id="avp-resume" style="display:none;padding:1rem">
+          <div class="eyebrow" style="margin-bottom:10px">Experience</div>
+          <div style="display:flex;flex-direction:column;gap:0">
+            <div style="padding:8px 0;border-bottom:0.5px solid var(--border)">
+              <div style="font-size:9px;color:var(--rgl);font-weight:400;margin-bottom:2px">Founder & Lead Ambassador</div>
+              <div style="font-size:8px;color:var(--rgd);margin-bottom:3px">Reset Talents LLC · NYC</div>
+              <div style="font-size:9px;color:var(--muted);font-weight:300;line-height:1.6">Founded Reset Talents, delivering world-class event production across the USA.</div>
+            </div>
+            <div style="padding:8px 0;border-bottom:0.5px solid var(--border)">
+              <div style="font-size:9px;color:var(--rgl);font-weight:400;margin-bottom:2px">VIP Brand Ambassador</div>
+              <div style="font-size:8px;color:var(--rgd);margin-bottom:3px">Gucci · Armani · Tiffany & Co. · Lacoste</div>
+              <div style="font-size:9px;color:var(--muted);font-weight:300;line-height:1.6">Elite hospitality at luxury brand activations and product launches globally.</div>
+            </div>
+            <div style="padding:8px 0;border-bottom:0.5px solid var(--border)">
+              <div style="font-size:9px;color:var(--rgl);font-weight:400;margin-bottom:2px">Senior Event Host</div>
+              <div style="font-size:8px;color:var(--rgd);margin-bottom:3px">Galas · Art Exhibitions</div>
+              <div style="font-size:9px;color:var(--muted);font-weight:300;line-height:1.6">High-profile galas and international art exhibitions — VIP guest experience management.</div>
+            </div>
+            <div style="padding:8px 0">
+              <div style="font-size:9px;color:var(--rgl);font-weight:400;margin-bottom:2px">International Hospitality</div>
+              <div style="font-size:8px;color:var(--rgd);margin-bottom:3px">40 Countries · 25 Years</div>
+              <div style="font-size:9px;color:var(--muted);font-weight:300;line-height:1.6">Cross-cultural hospitality expertise across 40 countries over 25 years.</div>
+            </div>
+          </div>
+          <a href="/vip-ambassadors" class="btn-g" style="display:block;text-align:center;font-size:8px;padding:7px;margin-top:10px">Full Profile ↗</a>
+        </div>
+
+                <!-- TAB: PHOTOS -->
+        <div id="avp-photos" style="display:none;padding:1rem">
+          <div class="eyebrow" style="margin-bottom:10px">Photos</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-bottom:6px">
+            <div style="aspect-ratio:2/3;border-radius:3px;overflow:hidden;border:0.5px solid var(--border);cursor:pointer">
+              <img src="/assets/aw-photo-1.jpg" alt="Andre Watson" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
+            </div>
+            <div style="aspect-ratio:2/3;border-radius:3px;overflow:hidden;border:0.5px solid var(--border);cursor:pointer">
+              <img src="/assets/aw-photo-5.jpg" alt="Andre Watson" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
+            </div>
+            <div style="aspect-ratio:2/3;border-radius:3px;overflow:hidden;border:0.5px solid var(--border);cursor:pointer">
+              <img src="/assets/aw-photo-6.jpg" alt="Andre Watson" style="width:100%;height:100%;object-fit:cover"/>
+            </div>
+            <div style="aspect-ratio:2/3;border-radius:3px;overflow:hidden;border:0.5px solid var(--border);cursor:pointer">
+              <img src="/assets/aw-photo-7.jpg" alt="Andre Watson" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
+            </div>
+            <div style="aspect-ratio:2/3;border-radius:3px;overflow:hidden;border:0.5px solid var(--border);cursor:pointer">
+              <img src="/assets/aw-photo-2.jpg" alt="Andre Watson" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
+            </div>
+            <div style="aspect-ratio:2/3;border-radius:3px;overflow:hidden;border:0.5px solid var(--border);cursor:pointer">
+              <img src="/assets/andre-watson-vip.jpg" alt="Andre Watson" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
+            </div>
+          </div>
+          <a href="/vip-ambassadors" class="btn-g" style="display:block;text-align:center;font-size:8px;padding:7px">See All Photos ↗</a>
+        </div>
+
+        <!-- TAB: STAFF INFO -->
+        <div id="avp-info" style="display:none;padding:1rem">
+          <div class="eyebrow" style="margin-bottom:10px">Staff Info</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+            <div style="background:var(--dark);border:0.5px solid var(--border);border-radius:3px;padding:7px;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">Height</span>
+              <span style="font-size:11px;color:var(--rgl);font-family:'Cormorant Garamond',serif">6'1"</span>
+            </div>
+            <div style="background:var(--dark);border:0.5px solid var(--border);border-radius:3px;padding:7px;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">Suit</span>
+              <span style="font-size:11px;color:var(--rgl);font-family:'Cormorant Garamond',serif">40R</span>
+            </div>
+            <div style="background:var(--dark);border:0.5px solid var(--border);border-radius:3px;padding:7px;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">Jacket</span>
+              <span style="font-size:11px;color:var(--rgl);font-family:'Cormorant Garamond',serif">M</span>
+            </div>
+            <div style="background:var(--dark);border:0.5px solid var(--border);border-radius:3px;padding:7px;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">Waist</span>
+              <span style="font-size:11px;color:var(--rgl);font-family:'Cormorant Garamond',serif">32</span>
+            </div>
+            <div style="background:var(--dark);border:0.5px solid var(--border);border-radius:3px;padding:7px;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">Shirt</span>
+              <span style="font-size:11px;color:var(--rgl);font-family:'Cormorant Garamond',serif">36×15.5</span>
+            </div>
+            <div style="background:var(--dark);border:0.5px solid var(--border);border-radius:3px;padding:7px;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">Inseam</span>
+              <span style="font-size:11px;color:var(--rgl);font-family:'Cormorant Garamond',serif">31</span>
+            </div>
+            <div style="background:var(--dark);border:0.5px solid var(--border);border-radius:3px;padding:7px;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">Shoe</span>
+              <span style="font-size:11px;color:var(--rgl);font-family:'Cormorant Garamond',serif">10</span>
+            </div>
+            <div style="background:var(--dark);border:0.5px solid var(--border);border-radius:3px;padding:7px;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">Hair</span>
+              <span style="font-size:11px;color:var(--rgl);font-family:'Cormorant Garamond',serif">Black</span>
+            </div>
+            <div style="background:var(--dark);border:0.5px solid var(--border);border-radius:3px;padding:7px;display:flex;justify-content:space-between;align-items:center;grid-column:span 2">
+              <span style="font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)">Eyes</span>
+              <span style="font-size:11px;color:var(--rgl);font-family:'Cormorant Garamond',serif">Brown</span>
+            </div>
+          </div>
+          <a href="/vip-ambassadors" class="btn-g" style="display:block;text-align:center;font-size:8px;padding:7px;margin-top:10px">Full Profile ↗</a>
+        </div>
+
+        <!-- TAB: REFERRALS -->
+        <div id="avp-referrals" style="display:none;padding:1rem">
+          <div class="eyebrow" style="margin-bottom:10px">Referrals</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="background:var(--dark);border:0.5px solid var(--border);border-radius:4px;padding:10px">
+              <div style="font-size:9px;color:var(--rgl);font-weight:400;margin-bottom:2px">Gucci</div>
+              <div style="font-size:9px;color:var(--muted);font-weight:300;line-height:1.6">VIP event ambassador — brand activation & product launch service.</div>
+            </div>
+            <div style="background:var(--dark);border:0.5px solid var(--border);border-radius:4px;padding:10px">
+              <div style="font-size:9px;color:var(--rgl);font-weight:400;margin-bottom:2px">Tiffany & Co.</div>
+              <div style="font-size:9px;color:var(--muted);font-weight:300;line-height:1.6">Elite hospitality staffing for exclusive private and brand events.</div>
+            </div>
+            <div style="background:var(--dark);border:0.5px solid var(--border);border-radius:4px;padding:10px">
+              <div style="font-size:9px;color:var(--rgl);font-weight:400;margin-bottom:2px">Armani / Lacoste</div>
+              <div style="font-size:9px;color:var(--muted);font-weight:300;line-height:1.6">Professional VIP ambassador services across multiple events.</div>
+            </div>
+          </div>
+          <a href="/vip-ambassadors" class="btn-g" style="display:block;text-align:center;font-size:8px;padding:7px;margin-top:10px">Full Profile ↗</a>
+        </div>
+
+      </div><!-- /Andre Watson card -->
+
+      <!-- COMING SOON SLOTS -->
+      <div style="background:var(--dark);border:0.5px dashed var(--border);border-radius:8px;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:1rem">
+        <div style="font-size:22px">👗</div>
+        <div class="eyebrow" style="font-size:8px">Models & Ambassadors</div>
+        <div style="font-size:8px;color:var(--muted);font-weight:300">Coming Soon</div>
+      </div>
+      <div style="background:var(--dark);border:0.5px dashed var(--border);border-radius:8px;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:1rem">
+        <div style="font-size:22px">🍸</div>
+        <div class="eyebrow" style="font-size:8px">VIP Bartenders</div>
+        <div style="font-size:8px;color:var(--muted);font-weight:300">Coming Soon</div>
+      </div>
+      <div style="background:var(--dark);border:0.5px dashed var(--border);border-radius:8px;min-height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:1rem">
+        <div style="font-size:22px">🍽️</div>
+        <div class="eyebrow" style="font-size:8px">VIP Servers</div>
+        <div style="font-size:8px;color:var(--muted);font-weight:300">Coming Soon</div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+  function awVipTab(tab, btn) {
+    ['profile','resume','photos','info','referrals'].forEach(function(t) {
+      document.getElementById('avp-'+t).style.display = t===tab ? 'block' : 'none';
+      var b = document.getElementById('avt-'+t);
+      b.style.borderBottom = t===tab ? '1.5px solid var(--rg)' : '1.5px solid transparent';
+      b.style.color = t===tab ? 'var(--rgl)' : 'var(--muted)';
+    });
+  }
+  </script>
+
+  <!-- PERFORMERS -->
+  <section class="sec" id="cat-performer">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.5rem">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--rgs)">Dancers & Performers</h2>
+      <div style="flex:1;height:0.5px;background:var(--border)"></div>
+      <div class="eyebrow">Coming Soon</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem">
+      <div style="background:var(--dark2);border:0.5px dashed var(--border);border-radius:8px;height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center"><div style="font-size:22px">💃</div><div class="eyebrow" style="font-size:8px">Dancers</div></div>
+      <div style="background:var(--dark2);border:0.5px dashed var(--border);border-radius:8px;height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center"><div style="font-size:22px">🎪</div><div class="eyebrow" style="font-size:8px">Aerialists</div></div>
+      <div style="background:var(--dark2);border:0.5px dashed var(--border);border-radius:8px;height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center"><div style="font-size:22px">🎭</div><div class="eyebrow" style="font-size:8px">Specialty Acts</div></div>
+      <div style="background:var(--dark2);border:0.5px dashed var(--border);border-radius:8px;height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center"><div style="font-size:22px">🎤</div><div class="eyebrow" style="font-size:8px">MC / Host</div></div>
+    </div>
+  </section>
+
+  <div class="cta-bar">
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:300;color:var(--rgs)">Don't see what you need? <em style="font-style:italic;color:var(--rgl)">We'll find it.</em></div>
+      <div style="font-size:10px;color:var(--muted);margin-top:4px;font-weight:300">Hundreds of artists across every genre and style.</div>
+    </div>
+    <div style="display:flex;gap:8px">
+      <a href="/contact" class="btn-p">Request Talent ↗</a>
+      <a href="/build-my-event" class="btn-g">Plan My Event</a>
+    </div>
+  </div>
+</main>
+<footer class="footer"><img src="/assets/logo-full.png" alt="Reset Talents" style="height:60px;width:auto;object-fit:contain;mix-blend-mode:screen"/><div class="footer-email">info@resettalents.com</div><div class="footer-est">Est. 2024</div>
+  <a href="/privacy" style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5a4a48;text-decoration:none">Privacy Policy</a></footer>
+<script>
+function fT(cat,btn){
+  document.querySelectorAll('#tCatBar .f-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  var m={dj:'cat-dj',live:'cat-live',photo:'cat-photo',vip:'cat-vip',performer:'cat-performer'};
+  Object.keys(m).forEach(k=>{
+    var el=document.getElementById(m[k]);
+    if(el)el.style.display=(cat==='all'||cat===k)?'block':'none';
+  });
+}
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('rt-hamburger');
+  var menu=document.getElementById('rt-mobile-menu');
+  if(!btn||!menu)return;
+  btn.addEventListener('click',function(){btn.classList.toggle('open');menu.classList.toggle('open');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){btn.classList.remove('open');menu.classList.remove('open');});});
+})();
+</script>
+</body>
+</html>

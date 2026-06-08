@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ES6H4X61J9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ES6H4X61J9');
+</script>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Event Venues — Reset Talents LLC</title>
+<meta name="description" content="Private event spaces in New York City. Brass & The Tusk Bar in NoMad and LouLou in Chelsea — exclusively available through Reset Talents."/>
+<meta property="og:title" content="Event Venues NYC — Reset Talents LLC"/>
+<meta property="og:description" content="Private event spaces in New York City. Brass & The Tusk Bar in NoMad and LouLou in Chelsea."/>
+<meta property="og:image" content="https://resettalents.com/assets/logo-full.png"/>
+<meta property="og:url" content="https://resettalents.com/venues"/>
+<meta property="og:site_name" content="Reset Talents LLC"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/style.css"/>
+<link rel="icon" href="/assets/logo-icon.png" type="image/png"/>
+<style>
+/* EVENT DECK STYLES */
+.deck-cover{position:relative;height:100vh;min-height:600px;max-height:800px;display:flex;align-items:flex-end;overflow:hidden}
+.deck-cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.deck-cover-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,17,17,0.97) 0%,rgba(20,17,17,0.55) 50%,rgba(20,17,17,0.2) 100%)}
+.deck-cover-content{position:relative;z-index:2;padding:3rem 3rem 3.5rem;width:100%}
+.deck-venue-label{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:rgba(232,196,176,0.6);margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.deck-venue-label::before{content:'';display:block;width:30px;height:0.5px;background:var(--rgd)}
+.deck-venue-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,72px);font-weight:300;color:#f0ece8;line-height:1;letter-spacing:2px;margin-bottom:14px}
+.deck-venue-sub{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--rgd);margin-bottom:2rem}
+.deck-badges{display:flex;gap:8px;flex-wrap:wrap}
+.deck-badge{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--rgl);border:0.5px solid rgba(201,149,122,0.5);padding:5px 14px;border-radius:2px}
+.deck-badge.highlight{background:rgba(201,149,122,0.12);border-color:var(--rg)}
+
+/* SPACE SLIDE */
+.space-slide{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
+.space-slide.reverse{direction:rtl}
+.space-slide.reverse>*{direction:ltr}
+.space-photo{position:relative;overflow:hidden;min-height:420px}
+.space-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s ease}
+.space-photo:hover img{transform:scale(1.03)}
+.space-photo-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,17,17,0.2),rgba(20,17,17,0.05))}
+.space-photo-badge{position:absolute;top:1.5rem;left:1.5rem;background:rgba(20,17,17,0.85);border:0.5px solid var(--rgd);color:var(--rgl);font-size:7px;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border-radius:2px}
+.space-photo-badge.gold{background:rgba(201,149,122,0.9);color:#141111;font-weight:500;border:none}
+.space-info{background:var(--dark2);padding:3rem 2.5rem;display:flex;flex-direction:column;justify-content:center;border-left:0.5px solid var(--border)}
+.space-slide.reverse .space-info{border-left:none;border-right:0.5px solid var(--border)}
+.space-number{font-family:'Cormorant Garamond',serif;font-size:64px;font-weight:300;color:rgba(201,149,122,0.08);line-height:1;margin-bottom:-10px}
+.space-label{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--rgd);margin-bottom:8px}
+.space-name{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,32px);font-weight:300;color:var(--rgs);line-height:1.2;margin-bottom:1rem}
+.space-desc{font-size:12px;color:var(--muted);line-height:1.9;font-weight:300;margin-bottom:1.5rem}
+.space-details{display:flex;flex-direction:column;gap:10px;margin-bottom:1.75rem;padding-bottom:1.75rem;border-bottom:0.5px solid var(--border)}
+.space-detail{display:flex;align-items:center;gap:12px}
+.space-detail-icon{width:28px;height:28px;border:0.5px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.space-detail-label{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--rgd);margin-bottom:2px}
+.space-detail-val{font-size:11px;color:var(--rgl);font-weight:400}
+.space-tags{display:flex;flex-wrap:wrap;gap:6px}
+.space-tag{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);border:0.5px solid var(--border);padding:3px 8px;border-radius:2px}
+
+/* DIVIDER SECTION */
+.deck-divider{padding:2.5rem 3rem;background:var(--dark);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.deck-capacity-grid{display:flex;gap:0}
+.deck-cap{padding:1.25rem 2rem;text-align:center;border-right:0.5px solid var(--border)}
+.deck-cap:last-child{border-right:none}
+.deck-cap-num{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--rgl);margin-bottom:3px}
+.deck-cap-label{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+
+/* FULL BLEED BANNER */
+.deck-banner{position:relative;height:320px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.deck-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.deck-banner-overlay{position:absolute;inset:0;background:rgba(20,17,17,0.72)}
+.deck-banner-content{position:relative;z-index:2;text-align:center;padding:2rem}
+
+/* CTA DECK */
+.deck-cta{padding:3rem;background:var(--dark2);border-top:0.5px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+.deck-cta-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* VENUE SEPARATOR */
+.venue-sep{height:6px;background:linear-gradient(to right,transparent,var(--rgd),transparent)}
+
+/* INCLUDES STRIP */
+.includes-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border)}
+.inc-item{padding:1.75rem;text-align:center;border-right:0.5px solid var(--border)}
+.inc-item:last-child{border-right:none}
+.inc-icon{font-size:22px;margin-bottom:10px}
+.inc-title{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--rgs);margin-bottom:5px}
+.inc-desc{font-size:10px;color:var(--muted);font-weight:300;line-height:1.6}
+
+@media(max-width:768px){
+  .space-slide,.space-slide.reverse{grid-template-columns:1fr;direction:ltr}
+  .space-photo{min-height:260px}
+  .space-info{padding:2rem 1.5rem}
+  .deck-cover-content{padding:2rem 1.5rem 2.5rem}
+  .deck-divider{flex-direction:column;padding:2rem 1.5rem}
+  .deck-capacity-grid{flex-wrap:wrap}
+  .deck-cap{padding:1rem 1.25rem}
+  .includes-strip{grid-template-columns:1fr 1fr}
+  .deck-cta{grid-template-columns:1fr;padding:2rem 1.5rem}
+  .deck-banner{height:200px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo"><img src="/assets/logo-icon.png" alt="Reset Talents" style="height:40px;width:auto;object-fit:contain;mix-blend-mode:screen"/></a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about" class="nav-link">About</a>
+    <a href="/talent" class="nav-link">Talent</a>
+    <a href="/venues" class="nav-link active">Venues</a>
+    <a href="/past-events" class="nav-link">Past Events</a>
+    <a href="/contact" class="nav-link">Contact</a>
+    <a href="/dj-mixes" class="nav-link">DJ Mixes</a>
+    <a href="/build-my-event" class="nav-cta">Plan My Event ↗</a>
+  </div>
+  <button class="nav-hamburger" id="rt-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div id="rt-mobile-menu" class="nav-mobile-menu">
+  <a href="/" class="nav-mobile-link">Home</a>
+  <a href="/about" class="nav-mobile-link">About</a>
+  <a href="/talent" class="nav-mobile-link">Talent</a>
+  <a href="/venues" class="nav-mobile-link active">Venues</a>
+  <a href="/past-events" class="nav-mobile-link">Past Events</a>
+  <a href="/contact" class="nav-mobile-link">Contact</a>
+  <a href="/dj-mixes" class="nav-mobile-link">DJ Mixes</a>
+  <a href="/build-my-event" class="nav-mobile-cta">Plan My Event ↗</a>
+</div>
+
+<main>
+<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">Private Event Venues NYC — Reset Talents</h1>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       VENUE 1 — BRASS & THE TUSK BAR
+  ════════════════════════════════════════════════════════════════ -->
+
+  <!-- BRASS COVER -->
+  <div class="deck-cover">
+    <img class="deck-cover-img"
+         src="/assets/brass-dining.jpg"
+         alt="Brass & The Tusk Bar"
+         onerror="this.style.background='#1a0e0a'"/>
+    <div class="deck-cover-overlay"></div>
+    <div class="deck-cover-content">
+      <div class="deck-venue-label">Private Event Venue No. 01 · The Evelyn Hotel · NoMad, New York City</div>
+      <div class="deck-venue-title">Brass &<br>The Tusk Bar</div>
+      <div class="deck-venue-sub">7 East 27th Street · NoMad NYC · Est. 1903</div>
+      <div class="deck-badges">
+        <div class="deck-badge highlight">Esquire's Best Bars in America</div>
+        <div class="deck-badge">5 Private Spaces</div>
+        <div class="deck-badge">8 – 300 Guests</div>
+        <div class="deck-badge">Art Deco Landmark</div>
+        <div class="deck-badge">Full Venue Buyout Available</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BRASS INTRO STRIP -->
+  <div class="deck-divider">
+    <div style="max-width:540px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--rgs);margin-bottom:8px">A landmark building. <em style="color:var(--rgl)">Five extraordinary spaces.</em></div>
+      <p style="font-size:12px;color:var(--muted);line-height:1.9;font-weight:300">Located inside The Evelyn Hotel — a landmark Art Deco building established in 1903 — Brass & The Tusk Bar offers five distinct event spaces that flow seamlessly into one another. Book one space or the entire venue for an exclusive buyout.</p>
+    </div>
+    <div class="deck-capacity-grid" style="border:0.5px solid var(--border);border-radius:4px;overflow:hidden">
+      <div class="deck-cap"><div class="deck-cap-num">8</div><div class="deck-cap-label">Minimum</div></div>
+      <div class="deck-cap"><div class="deck-cap-num">300+</div><div class="deck-cap-label">Maximum</div></div>
+      <div class="deck-cap"><div class="deck-cap-num">5</div><div class="deck-cap-label">Spaces</div></div>
+      <div class="deck-cap"><div class="deck-cap-num">1903</div><div class="deck-cap-label">Est.</div></div>
+    </div>
+  </div>
+
+  <!-- SPACE 1: BRASS DINING ROOM -->
+  <div class="space-slide">
+    <div class="space-photo">
+      <img src="/assets/brass-dining-day.jpg" alt="BRASS Grand Dining Room" onerror="this.style.background='#1a100a'"/>
+      <div class="space-photo-overlay"></div>
+      <div class="space-photo-badge">Space 01 of 05</div>
+    </div>
+    <div class="space-info">
+      <div class="space-number">01</div>
+      <div class="space-label">Grand Dining Room</div>
+      <div class="space-name">BRASS</div>
+      <div class="space-desc">A New York City brasserie of rare grandeur. The BRASS dining room features an oversized original skylight flooding the room with light, hand-painted frescos, and color-soaked architecture — a theatrical backdrop for any event. Designed by the team behind some of NYC's most celebrated restaurants, this is a space that makes an impression from the moment guests walk in.</div>
+      <div class="space-details">
+        <div class="space-detail">
+          <div class="space-detail-icon">👥</div>
+          <div><div class="space-detail-label">Capacity</div><div class="space-detail-val">80 seated · 130 standing reception</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🎵</div>
+          <div><div class="space-detail-label">Entertainment</div><div class="space-detail-val">Live music available nightly — add Reset Talents artists</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🔗</div>
+          <div><div class="space-detail-label">Flexibility</div><div class="space-detail-val">Combinable with Tusk Bar & Private Dining Room</div></div>
+        </div>
+      </div>
+      <div class="space-tags">
+        <span class="space-tag">Seated Dinner</span>
+        <span class="space-tag">Gala</span>
+        <span class="space-tag">Corporate</span>
+        <span class="space-tag">Wedding Reception</span>
+        <span class="space-tag">Award Ceremony</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPACE 2: THE TUSK BAR -->
+  <div class="space-slide reverse">
+    <div class="space-photo">
+      <img src="/assets/tusk-bar.jpg" alt="The Tusk Bar" onerror="this.style.background='#100a0a'"/>
+      <div class="space-photo-overlay"></div>
+      <div class="space-photo-badge gold">Esquire's Best Bars in America</div>
+    </div>
+    <div class="space-info">
+      <div class="space-number">02</div>
+      <div class="space-label">Cocktail & Oyster Bar</div>
+      <div class="space-name">The Tusk Bar</div>
+      <div class="space-desc">Named one of Esquire's Best Bars in America. Set in the lobby of The Evelyn Hotel, The Tusk Bar pairs timeless elegance with free-wheeling flair. The centerpiece is a show-stopping grand marble bar, surrounded by intimate cocktail tables and lounge-style seating nooks. The inspiration — an upscale bohemian Parisian apartment — balances historic features with vintage elements and eclectic art.</div>
+      <div class="space-details">
+        <div class="space-detail">
+          <div class="space-detail-icon">👥</div>
+          <div><div class="space-detail-label">Capacity</div><div class="space-detail-val">Up to 70 for cocktail parties</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🦪</div>
+          <div><div class="space-detail-label">Highlight</div><div class="space-detail-val">Grand marble bar · Raw bar · Artful cocktails</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🔗</div>
+          <div><div class="space-detail-label">Flexibility</div><div class="space-detail-val">Combinable with BRASS or Private Dining Room</div></div>
+        </div>
+      </div>
+      <div class="space-tags">
+        <span class="space-tag">Cocktail Reception</span>
+        <span class="space-tag">Networking Event</span>
+        <span class="space-tag">Product Launch</span>
+        <span class="space-tag">Birthday Celebration</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPACE 3: PRIVATE DINING ROOM -->
+  <div class="space-slide">
+    <div class="space-photo">
+      <img src="/assets/brass-pdr.jpg" alt="Private Dining Room" onerror="this.style.background='#0d0a0a';this.parentElement.style.background='#0d0a0a'"/>
+      <div class="space-photo-overlay"></div>
+      <div class="space-photo-badge">Space 03 of 05</div>
+    </div>
+    <div class="space-info">
+      <div class="space-number">03</div>
+      <div class="space-label">Intimate Private Space</div>
+      <div class="space-name">Private Dining Room</div>
+      <div class="space-desc">Located behind the Tusk Bar and opposite the entrance to BRASS, the Private Dining Room occupies the original dining room of the hotel. A speakeasy-style, wood-paneled sanctuary that oozes character — perfect for executive dinners, intimate celebrations, and confidential gatherings that demand exclusivity. A room with history, warmth, and unmistakable personality.</div>
+      <div class="space-details">
+        <div class="space-detail">
+          <div class="space-detail-icon">👥</div>
+          <div><div class="space-detail-label">Capacity</div><div class="space-detail-val">30 seated · Intimate & exclusive</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🚪</div>
+          <div><div class="space-detail-label">Atmosphere</div><div class="space-detail-val">Speakeasy style · Wood-paneled · Historic</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🔗</div>
+          <div><div class="space-detail-label">Flexibility</div><div class="space-detail-val">Can be combined with Tusk Bar for larger groups</div></div>
+        </div>
+      </div>
+      <div class="space-tags">
+        <span class="space-tag">Executive Dinner</span>
+        <span class="space-tag">Intimate Celebration</span>
+        <span class="space-tag">Board Dinner</span>
+        <span class="space-tag">Rehearsal Dinner</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPACE 4: CAFFÈ TUSK -->
+  <div class="space-slide reverse">
+    <div class="space-photo">
+      <img src="https://images.squarespace-cdn.com/content/v1/656a4b4630f72a3afcc70e4a/ab3fa945-b4c5-4431-af14-dbb1642f5d17/IMG_5647.jpg" alt="Ninepin Cafe" onerror="this.style.background='#0a0c0a'"/>
+      <div class="space-photo-overlay"></div>
+      <div class="space-photo-badge">Space 04 · Café & Mezzanine</div>
+    </div>
+    <div class="space-info">
+      <div class="space-number">04</div>
+      <div class="space-label">All-Day Café & Mezzanine</div>
+      <div class="space-name">Ninepin Cafe</div>
+      <div class="space-desc">The newest member of the Brass family — a Euro-inspired NoMad café with a distinct, sunlit identity. Ninepin Cafe is the ideal space for daytime private events, corporate breakfasts, and brunch buyouts. Warm, refined, and intimate, it brings a European café atmosphere to Midtown Manhattan — a versatile backdrop that works effortlessly for morning-to-evening gatherings.</div>
+      <div class="space-details">
+        <div class="space-detail">
+          <div class="space-detail-icon">☀️</div>
+          <div><div class="space-detail-label">Best For</div><div class="space-detail-val">Daytime & brunch private events</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🌿</div>
+          <div><div class="space-detail-label">Atmosphere</div><div class="space-detail-val">Sunny all-day café · Manhattan vibes</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🔗</div>
+          <div><div class="space-detail-label">Flexibility</div><div class="space-detail-val">Combinable with Mezzanine for workspace offsites</div></div>
+        </div>
+      </div>
+      <div class="space-tags">
+        <span class="space-tag">Corporate Breakfast</span>
+        <span class="space-tag">Brunch Buyout</span>
+        <span class="space-tag">Team Meeting</span>
+        <span class="space-tag">Pre-Event</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BRASS WHAT'S INCLUDED -->
+  <div class="includes-strip" style="background:var(--dark2)">
+    <div class="inc-item">
+      <div class="inc-icon">🏛️</div>
+      <div class="inc-title">Landmark Setting</div>
+      <div class="inc-desc">Art Deco building with 120-year history in the heart of NoMad</div>
+    </div>
+    <div class="inc-item">
+      <div class="inc-icon">🎵</div>
+      <div class="inc-title">Live Entertainment</div>
+      <div class="inc-desc">Add live music from the Reset Talents roster — DJs, violinists, bands</div>
+    </div>
+    <div class="inc-item">
+      <div class="inc-icon">🔗</div>
+      <div class="inc-title">Flexible Configuration</div>
+      <div class="inc-desc">All 5 spaces can be combined or booked individually</div>
+    </div>
+    <div class="inc-item">
+      <div class="inc-icon">📋</div>
+      <div class="inc-title">Full Coordination</div>
+      <div class="inc-desc">Reset Talents manages all venue coordination on your behalf</div>
+    </div>
+  </div>
+
+  <!-- BRASS CTA -->
+  <div class="deck-cta">
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--rgs);margin-bottom:6px">Book Brass & The Tusk Bar <em style="color:var(--rgl)">through Reset Talents.</em></div>
+      <div style="font-size:11px;color:var(--muted);font-weight:300">Add this venue to your event build. We coordinate directly with the Brass events team — one email, one quote, no back and forth.</div>
+      <div style="font-size:10px;color:var(--rgd);margin-top:6px;font-weight:300">For event inquiries direct: events@brassny.com</div>
+    </div>
+    <div class="deck-cta-actions">
+      <a href="/build-my-event" class="btn-p" style="white-space:nowrap">Add to My Event ↗</a>
+      <a href="https://www.brassny.com/events" target="_blank" rel="noopener" class="btn-g" style="white-space:nowrap">View Event Deck ↗</a>
+    </div>
+  </div>
+
+  <!-- VENUE SEPARATOR -->
+  <div class="venue-sep"></div>
+
+<!-- VENUE 2 — LOULOU -->
+  <section style="padding:2.5rem 1.5rem;border-bottom:0.5px solid var(--border);background:var(--dark2)">
+    <div style="max-width:960px;margin:0 auto">
+
+      <!-- Header -->
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem">
+        <div>
+          <div class="eyebrow" style="margin-bottom:6px">Private Event Venue · Chelsea, New York City</div>
+          <h2 style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--rgs);margin-bottom:4px">LouLou Petit Bistro & Speakeasy</h2>
+          <p style="font-size:11px;color:var(--muted);font-weight:300">176 8th Avenue (corner of 19th Street) · Chelsea, New York City 10011</p>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap">
+          <span style="font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rgl);border:0.5px solid var(--rgd);padding:4px 10px;border-radius:2px">3 Distinct Spaces</span>
+          <span style="font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rgl);border:0.5px solid var(--rgd);padding:4px 10px;border-radius:2px">250+ Full Buyout</span>
+          <span style="font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rgl);border:0.5px solid var(--rgd);padding:4px 10px;border-radius:2px">Indoor & Outdoor</span>
+        </div>
+      </div>
+
+      <!-- Intro -->
+      <p style="font-size:12px;color:var(--muted);line-height:2;font-weight:300;margin-bottom:2rem;max-width:800px">Three entirely different atmospheres in the heart of Chelsea — a rustic NYC loft dining room, a flower-covered outdoor cabana terrace, and a Prohibition-era speakeasy lounge hidden behind a vintage vending machine. Book one space, two, or combine all three for a full venue buyout of 250+ guests.</p>
+
+      <!-- CAPACITY STRIP -->
+      <div class="deck-divider" style="margin-bottom:2rem;padding:0;flex-wrap:wrap;gap:0">
+        <div class="deck-capacity-grid" style="border:0.5px solid var(--border);border-radius:4px;overflow:hidden;width:100%">
+          <div class="deck-cap"><div class="deck-cap-num">96</div><div class="deck-cap-label">Dining Room Seated</div></div>
+          <div class="deck-cap"><div class="deck-cap-num">+20</div><div class="deck-cap-label">Bar Stools</div></div>
+          <div class="deck-cap"><div class="deck-cap-num">150</div><div class="deck-cap-label">Dining Standing</div></div>
+          <div class="deck-cap"><div class="deck-cap-num">36/80</div><div class="deck-cap-label">Speakeasy Seated/Reception</div></div>
+          <div class="deck-cap"><div class="deck-cap-num">250+</div><div class="deck-cap-label">Full Buyout</div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPACE 1: MAIN DINING ROOM -->
+  <div class="space-slide" style="background:var(--dark)">
+    <div class="space-photo">
+      <img src="/assets/loulou-dining.jpg" alt="LouLou Main Dining Room"
+           style="width:100%;height:100%;object-fit:cover;object-position:center"
+           onerror="this.style.display='none'"/>
+      <div class="space-photo-overlay"></div>
+      <div class="space-photo-badge">Space 01 · Main Dining Room</div>
+    </div>
+    <div class="space-info">
+      <div class="space-number">01</div>
+      <div class="space-label">Rustic NYC Loft Dining</div>
+      <div class="space-name">Main Dining Room</div>
+      <div class="space-desc">A space unlike anything else in Chelsea. Exposed wood beams, cascading live greenery, warm leather booths, brick walls, and iron finishes come together to create a cozy yet elevated atmosphere that feels like being a guest in a luxury NYC loft. The natural materials and layered textures make it a compelling backdrop for events of all kinds — from intimate birthday brunches to large corporate group dinners and receptions.</div>
+      <div class="space-details">
+        <div class="space-detail">
+          <div class="space-detail-icon">👥</div>
+          <div><div class="space-detail-label">Capacity</div><div class="space-detail-val">96 seated + 20 bar stools · 150 standing</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🌿</div>
+          <div><div class="space-detail-label">Atmosphere</div><div class="space-detail-val">Exposed beams · Cascading greenery · Warm woods</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🔗</div>
+          <div><div class="space-detail-label">Flexibility</div><div class="space-detail-val">Combinable with Speakeasy & Cabanas for 250+ buyout</div></div>
+        </div>
+      </div>
+      <div class="space-tags">
+        <span class="space-tag">Corporate Dinners</span>
+        <span class="space-tag">Birthday Celebration</span>
+        <span class="space-tag">Seated Reception</span>
+        <span class="space-tag">Private Buyout</span>
+        <span class="space-tag">Brunch Events</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPACE 2: THE CABANAS -->
+  <div class="space-slide reverse" style="background:var(--dark2)">
+    <div class="space-photo">
+      <img src="/assets/loulou-cabana.jpg" alt="LouLou Cabanas"
+           style="width:100%;height:100%;object-fit:cover;object-position:center"
+           onerror="this.style.display='none'"/>
+      <div class="space-photo-overlay"></div>
+      <div class="space-photo-badge gold">Seasonal · Outdoor</div>
+    </div>
+    <div class="space-info">
+      <div class="space-number">02</div>
+      <div class="space-label">Flower-Covered Outdoor Terrace</div>
+      <div class="space-name">The Cabanas</div>
+      <div class="space-desc">One of the most visually striking outdoor dining spaces in New York City. A semi-open pergola structure bursting with cascading pink bougainvillea, lush greenery, and climbing vines — it feels like a hidden garden in the middle of Chelsea. Natural wood furniture, striped overhead canopy, and flowers from every direction create an atmosphere that photographs beautifully and feels genuinely unique. Available seasonally for outdoor private events.</div>
+      <div class="space-details">
+        <div class="space-detail">
+          <div class="space-detail-icon">🌸</div>
+          <div><div class="space-detail-label">Setting</div><div class="space-detail-val">Outdoor pergola · Bougainvillea · Semi-open air</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">📅</div>
+          <div><div class="space-detail-label">Availability</div><div class="space-detail-val">Seasonal — spring through fall</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🔗</div>
+          <div><div class="space-detail-label">Flexibility</div><div class="space-detail-val">Standalone or combined with dining room & speakeasy</div></div>
+        </div>
+      </div>
+      <div class="space-tags">
+        <span class="space-tag">Outdoor Reception</span>
+        <span class="space-tag">Garden Party</span>
+        <span class="space-tag">Spring/Summer Events</span>
+        <span class="space-tag">Brunch Buyout</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPACE 3: THE SPEAKEASY -->
+  <div class="space-slide" style="background:var(--dark)">
+    <div class="space-photo">
+      <img src="/assets/loulou-speakeasy.jpg" alt="LouLou Speakeasy"
+           style="width:100%;height:100%;object-fit:cover;object-position:center"
+           onerror="this.style.display='none'"/>
+      <div class="space-photo-overlay"></div>
+      <div class="space-photo-badge gold">Private Events Available</div>
+    </div>
+    <div class="space-info">
+      <div class="space-number">03</div>
+      <div class="space-label">Hidden Prohibition Lounge</div>
+      <div class="space-name">The Speakeasy</div>
+      <div class="space-desc">Enter through a door disguised as a vintage Coca-Cola vending machine and discover a 19th-century fairy tale lounge that your guests will never forget. Inside: a lush jungle-inspired mural covering the ceiling, a glowing gold bar, and luxurious velvet seating throughout. The space has no parallel in New York City for private events — intimate, immersive, and completely unexpected. Live jazz, burlesque, and entertainment available to elevate the experience.</div>
+      <div class="space-details">
+        <div class="space-detail">
+          <div class="space-detail-icon">👥</div>
+          <div><div class="space-detail-label">Capacity</div><div class="space-detail-val">36 seated · 80 reception</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🚪</div>
+          <div><div class="space-detail-label">Entrance</div><div class="space-detail-val">Hidden door disguised as a vintage vending machine</div></div>
+        </div>
+        <div class="space-detail">
+          <div class="space-detail-icon">🎷</div>
+          <div><div class="space-detail-label">Entertainment</div><div class="space-detail-val">Live jazz · Burlesque · Gold bar · Jungle mural</div></div>
+        </div>
+      </div>
+      <div class="space-tags">
+        <span class="space-tag">Intimate Dinner</span>
+        <span class="space-tag">After Party</span>
+        <span class="space-tag">Corporate Night</span>
+        <span class="space-tag">Birthday Night</span>
+        <span class="space-tag">Late Night Lounge</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL BUYOUT BANNER -->
+  <div class="deck-banner" style="background:#0a0609">
+    <img src="/assets/loulou-cabana.jpg"
+         style="object-position:center top;opacity:0.18"
+         onerror="this.style.display='none'"/>
+    <div class="deck-banner-overlay"></div>
+    <div class="deck-banner-content">
+      <div class="eyebrow" style="margin-bottom:12px">Full Venue Buyout · 250+ Guests</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(22px,4vw,40px);font-weight:300;color:var(--rgs);margin-bottom:12px">Dining room, cabana, and speakeasy.<br><em style="color:var(--rgl)">One unforgettable evening.</em></div>
+      <p style="font-size:12px;color:rgba(232,196,176,0.7);font-weight:300;max-width:520px;margin:0 auto">Combine all three spaces for a full venue buyout. Start with cocktails in the garden cabana, move to dinner in the dining room, and end the night in the hidden speakeasy. Three worlds. One night.</p>
+    </div>
+  </div>
+
+  <!-- INCLUDES STRIP -->
+  <div class="includes-strip" style="background:var(--dark2)">
+    <div class="inc-item">
+      <div class="inc-icon">🌸</div>
+      <div class="inc-title">Outdoor Cabana</div>
+      <div class="inc-desc">Flower-covered outdoor terrace — a NYC event space unlike any other</div>
+    </div>
+    <div class="inc-item">
+      <div class="inc-icon">🚪</div>
+      <div class="inc-title">Hidden Speakeasy</div>
+      <div class="inc-desc">Secret entrance through a vintage Coca-Cola vending machine door</div>
+    </div>
+    <div class="inc-item">
+      <div class="inc-icon">🎷</div>
+      <div class="inc-title">Live Entertainment</div>
+      <div class="inc-desc">Jazz bands, burlesque, DJs, photographers, dancers — inquire for pricing</div>
+    </div>
+    <div class="inc-item">
+      <div class="inc-icon">📋</div>
+      <div class="inc-title">Full Coordination</div>
+      <div class="inc-desc">Reset Talents manages all venue coordination on your behalf</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="deck-cta" style="background:var(--dark2)">
+    <div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--rgs);margin-bottom:6px">Book LouLou <em style="color:var(--rgl)">through Reset Talents.</em></div>
+      <div style="font-size:11px;color:var(--muted);font-weight:300">Add this venue to your event build. We handle all coordination with LouLou's team — one email, one quote, no back and forth.</div>
+      <div style="font-size:10px;color:var(--rgd);margin-top:6px;font-weight:300">For direct event inquiries: ANNA@loulounyc.com</div>
+    </div>
+    <div class="deck-cta-actions">
+      <a href="/build-my-event" class="btn-p" style="white-space:nowrap">Add to My Event ↗</a>
+      <a href="https://www.loulounyc.com/private-events/" target="_blank" rel="noopener" class="btn-g" style="white-space:nowrap">Private Events Page ↗</a>
+    </div>
+  </div>
+
+  <!-- VENUE SEPARATOR -->
+  <div class="venue-sep"></div>
+
+  <!-- HAVE A DIFFERENT VENUE IN MIND -->
+  <section style="padding:3.5rem 3rem;text-align:center">
+    <div style="max-width:580px;margin:0 auto">
+      <div class="eyebrow" style="margin-bottom:10px">Looking for something different?</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--rgs);margin-bottom:12px">Have a venue in mind? <em style="color:var(--rgl)">We'll make it work.</em></div>
+      <p style="font-size:12px;color:var(--muted);line-height:1.9;font-weight:300;margin-bottom:2rem">Already have a space you love — or need help finding the perfect venue for your guest count, style, and budget? Tell us what you need. We source and coordinate venues anywhere in the USA.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a href="/contact" class="btn-p">Tell Us Your Vision ↗</a>
+        <a href="/build-my-event" class="btn-g">Plan My Full Event</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <img src="/assets/logo-full.png" alt="Reset Talents" style="height:60px;width:auto;object-fit:contain;mix-blend-mode:screen"/>
+  <div class="footer-email">info@resettalents.com</div>
+  <div class="footer-est">Est. 2024</div>
+  <a href="/privacy" style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5a4a48;text-decoration:none">Privacy Policy</a>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('rt-hamburger');
+  var menu=document.getElementById('rt-mobile-menu');
+  if(!btn||!menu)return;
+  btn.addEventListener('click',function(){btn.classList.toggle('open');menu.classList.toggle('open');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){btn.classList.remove('open');menu.classList.remove('open');});});
+})();
+</script>
+</body>
+</html>

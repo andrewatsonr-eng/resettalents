@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ES6H4X61J9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ES6H4X61J9');
+</script>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Andre Watson — VIP Event Ambassador · Reset Talents</title>
+<meta name="description" content="Andre Watson — VIP Event Ambassador. Server, Bartender, Hostess, Brand Ambassador. 25 years · 40 countries · Gucci · Armani · Tiffany & Co. · Lacoste."/>
+<meta property="og:title" content="Andre Watson — VIP Event Ambassador · Reset Talents"/>
+<meta property="og:image" content="https://resettalents.com/assets/andre-watson-vip.jpg"/>
+<meta property="og:url" content="https://resettalents.com/vip-ambassadors"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/style.css"/>
+<link rel="icon" href="/assets/logo-icon.png" type="image/png"/>
+<style>
+/* ── GALLERY ─────────────────────────────────────────── */
+.profile-hero{
+  display:grid;
+  grid-template-columns:340px 1fr;
+  min-height:540px;
+  border-bottom:0.5px solid var(--border);
+}
+.profile-photo{
+  position:relative;overflow:hidden;background:#0d090c;
+}
+.profile-photo img{
+  width:100%;height:100%;object-fit:cover;object-position:top center;
+  display:block;
+}
+.profile-info{
+  padding:3rem 3rem 2.5rem;
+  display:flex;flex-direction:column;justify-content:center;
+  background:var(--dark);
+}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:3px;
+}
+.gallery-item{
+  position:relative;
+  aspect-ratio:3/4;
+  overflow:hidden;
+  cursor:pointer;
+  background:var(--dark2);
+}
+.gallery-item img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform 0.5s ease;
+  display:block;
+}
+.gallery-item:hover img{transform:scale(1.05);}
+.gallery-item.tall{aspect-ratio:3/5;}
+.gallery-item.wide{aspect-ratio:4/3;}
+
+/* LIGHTBOX */
+#lb-overlay{
+  display:none;
+  position:fixed;inset:0;
+  background:rgba(10,8,10,0.97);
+  z-index:9999;
+  align-items:center;
+  justify-content:center;
+}
+#lb-overlay.open{display:flex;}
+#lb-img{
+  max-height:92vh;
+  max-width:88vw;
+  object-fit:contain;
+  border-radius:3px;
+  display:block;
+  user-select:none;
+}
+.lb-btn{
+  position:absolute;
+  background:none;
+  border:0.5px solid rgba(201,149,122,0.3);
+  color:var(--rgl);
+  font-size:20px;
+  cursor:pointer;
+  width:44px;height:44px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  transition:border-color 0.2s;
+}
+.lb-btn:hover{border-color:var(--rg);}
+#lb-close{top:1.5rem;right:1.5rem;}
+#lb-prev{left:1.5rem;}
+#lb-next{right:1.5rem;}
+#lb-counter{
+  position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);
+  font-size:9px;letter-spacing:3px;text-transform:uppercase;
+  color:rgba(232,196,176,0.4);
+}
+
+@media(max-width:768px){
+  .profile-hero{grid-template-columns:1fr;min-height:auto;}
+  .profile-photo{height:60vw;min-height:260px;}
+  .profile-info{padding:1.75rem 1.5rem;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  #lb-prev{left:0.75rem;}
+  #lb-next{right:0.75rem;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo"><img src="/assets/logo-icon.png" alt="Reset Talents" style="height:40px;width:auto;object-fit:contain;mix-blend-mode:screen"/></a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about" class="nav-link">About</a>
+    <a href="/talent" class="nav-link active">Talent</a>
+    <a href="/venues" class="nav-link">Venues</a>
+    <a href="/past-events" class="nav-link">Past Events</a>
+    <a href="/contact" class="nav-link">Contact</a>
+    <a href="/dj-mixes" class="nav-link">DJ Mixes</a>
+    <a href="/build-my-event" class="nav-cta">Plan My Event ↗</a>
+  </div>
+  <button class="nav-hamburger" id="rt-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div id="rt-mobile-menu" class="nav-mobile-menu">
+  <a href="/" class="nav-mobile-link">Home</a>
+  <a href="/about" class="nav-mobile-link">About</a>
+  <a href="/talent" class="nav-mobile-link active">Talent</a>
+  <a href="/venues" class="nav-mobile-link">Venues</a>
+  <a href="/past-events" class="nav-mobile-link">Past Events</a>
+  <a href="/contact" class="nav-mobile-link">Contact</a>
+  <a href="/dj-mixes" class="nav-mobile-link">DJ Mixes</a>
+  <a href="/build-my-event" class="nav-mobile-cta">Plan My Event ↗</a>
+</div>
+
+<main>
+<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">Andre Watson — VIP Event Ambassador</h1>
+
+  <!-- PROFILE HEADER -->
+  <div class="profile-hero">
+
+    <!-- MAIN PHOTO -->
+    <div class="profile-photo">
+      <img src="/assets/andre-watson-vip.jpg" alt="Andre Watson"/>
+    </div>
+
+    <!-- INFO -->
+    <div class="profile-info">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:1.5rem">
+        <div style="background:linear-gradient(90deg,rgba(201,149,122,0.12),rgba(201,149,122,0.04));border:0.5px solid rgba(201,149,122,0.3);padding:5px 14px;border-radius:2px;font-size:7px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rgl)">Founder · Reset Talents</div>
+        <div style="width:8px;height:8px;border-radius:50%;background:#4a9e6a"></div>
+      </div>
+
+      <div class="eyebrow" style="margin-bottom:8px">VIP Event Ambassador · NYC</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,56px);font-weight:300;color:var(--rgs);line-height:1;margin-bottom:6px">Andre Watson</div>
+      <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--rgd);margin-bottom:2rem">Server · Bartender · Hostess · Brand Ambassador</div>
+
+      <p style="font-size:12px;color:var(--muted);line-height:1.9;font-weight:300;margin-bottom:2rem;max-width:480px">25 years of elite hospitality experience across 40 countries. VIP events for Gucci, Armani, Tiffany & Co., Lacoste, galas, and international art exhibitions worldwide.</p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:2rem">
+        <span style="font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:4px 10px;border-radius:2px">Gucci</span>
+        <span style="font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:4px 10px;border-radius:2px">Armani</span>
+        <span style="font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:4px 10px;border-radius:2px">Tiffany & Co.</span>
+        <span style="font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:4px 10px;border-radius:2px">Lacoste</span>
+        <span style="font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:4px 10px;border-radius:2px">Galas</span>
+        <span style="font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--rgd);border:0.5px solid var(--border);padding:4px 10px;border-radius:2px">Art Exhibitions</span>
+      </div>
+
+      <!-- STAFF INFO ROW -->
+      <div style="display:flex;gap:0;border:0.5px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:2rem">
+        <div style="padding:10px 14px;text-align:center;border-right:0.5px solid var(--border)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rgl)">6'1"</div>
+          <div style="font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">Height</div>
+        </div>
+        <div style="padding:10px 14px;text-align:center;border-right:0.5px solid var(--border)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rgl)">40R</div>
+          <div style="font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">Suit</div>
+        </div>
+        <div style="padding:10px 14px;text-align:center;border-right:0.5px solid var(--border)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rgl)">32</div>
+          <div style="font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">Waist</div>
+        </div>
+        <div style="padding:10px 14px;text-align:center;border-right:0.5px solid var(--border)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rgl)">10</div>
+          <div style="font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">Shoe</div>
+        </div>
+        <div style="padding:10px 14px;text-align:center;border-right:0.5px solid var(--border)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rgl)">Black</div>
+          <div style="font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">Hair</div>
+        </div>
+        <div style="padding:10px 14px;text-align:center">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--rgl)">Brown</div>
+          <div style="font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">Eyes</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="/build-my-event" class="btn-p">Add to My Event ↗</a>
+        <a href="/talent" class="btn-g">← Back to Talent</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PHOTO GALLERY -->
+  <section style="background:var(--dark2)">
+    <div style="padding:2rem 2rem 1rem;display:flex;align-items:center;justify-content:space-between">
+      <div>
+        <div class="eyebrow" style="margin-bottom:4px">Photo Album</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--rgs)">Andre Watson</div>
+      </div>
+      <div style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">8 Photos · Click to enlarge</div>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item tall" onclick="lb(0)">
+        <img src="/assets/andre-watson-vip.jpg" alt="Andre Watson" style="object-position:top"/>
+      </div>
+
+      <div class="gallery-item" onclick="lb(1)">
+        <img src="/assets/aw-photo-1.jpg" alt="Andre Watson" style="object-position:top"/>
+      </div>
+
+      <div class="gallery-item" onclick="lb(2)">
+        <img src="/assets/aw-photo-5.jpg" alt="Andre Watson" style="object-position:top"/>
+      </div>
+
+      <div class="gallery-item tall" onclick="lb(3)">
+        <img src="/assets/aw-photo-6.jpg" alt="Andre Watson" style="object-position:center"/>
+      </div>
+
+      <div class="gallery-item" onclick="lb(4)">
+        <img src="/assets/aw-photo-7.jpg" alt="Andre Watson" style="object-position:top"/>
+      </div>
+
+      <div class="gallery-item" onclick="lb(5)">
+        <img src="/assets/aw-photo-2.jpg" alt="Andre Watson" style="object-position:top"/>
+      </div>
+
+      <div class="gallery-item" onclick="lb(6)">
+        <img src="/assets/aw-photo-3.jpg" alt="Andre Watson" style="object-position:center"/>
+      </div>
+
+      <div class="gallery-item" onclick="lb(7)">
+        <img src="/assets/aw-photo-4.jpg" alt="Andre Watson" style="object-position:center"/>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:3rem 2rem;text-align:center;background:var(--dark);border-top:0.5px solid var(--border)">
+    <div style="max-width:500px;margin:0 auto">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--rgs);margin-bottom:8px">Available for booking <em style="color:var(--rgl)">via Reset Talents.</em></div>
+      <p style="font-size:11px;color:var(--muted);font-weight:300;line-height:1.8;margin-bottom:1.5rem">Add Andre Watson to your event. We handle all coordination — one email, one quote.</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+        <a href="/build-my-event" class="btn-p">Add to My Event ↗</a>
+        <a href="/talent" class="btn-g">← Full Talent Roster</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div id="lb-overlay" onclick="if(event.target===this)lbClose()">
+  <button class="lb-btn" id="lb-close" onclick="lbClose()">✕</button>
+  <button class="lb-btn" id="lb-prev" onclick="lbNav(-1)">‹</button>
+  <img id="lb-img" src="" alt="Andre Watson"/>
+  <button class="lb-btn" id="lb-next" onclick="lbNav(1)">›</button>
+  <div id="lb-counter"></div>
+</div>
+
+<footer class="footer">
+  <img src="/assets/logo-full.png" alt="Reset Talents" style="height:60px;width:auto;object-fit:contain;mix-blend-mode:screen"/>
+  <div class="footer-email">info@resettalents.com</div>
+  <div class="footer-est">Est. 2024</div>
+  <a href="/privacy" style="font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5a4a48;text-decoration:none">Privacy Policy</a>
+</footer>
+
+<script>
+// NAV
+(function(){
+  var btn=document.getElementById('rt-hamburger');
+  var menu=document.getElementById('rt-mobile-menu');
+  if(!btn||!menu)return;
+  btn.addEventListener('click',function(){btn.classList.toggle('open');menu.classList.toggle('open');});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){btn.classList.remove('open');menu.classList.remove('open');});});
+})();
+
+// LIGHTBOX
+var _photos = [
+  '/assets/andre-watson-vip.jpg',
+  '/assets/aw-photo-1.jpg',
+  '/assets/aw-photo-5.jpg',
+  '/assets/aw-photo-6.jpg',
+  '/assets/aw-photo-7.jpg',
+  '/assets/aw-photo-2.jpg',
+  '/assets/aw-photo-3.jpg',
+  '/assets/aw-photo-4.jpg'
+];
+var _idx = 0;
+
+function lb(i){
+  _idx = i;
+  document.getElementById('lb-img').src = _photos[i];
+  document.getElementById('lb-counter').textContent = (i+1) + ' / ' + _photos.length;
+  document.getElementById('lb-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function lbClose(){
+  document.getElementById('lb-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function lbNav(d){
+  _idx = (_idx + d + _photos.length) % _photos.length;
+  document.getElementById('lb-img').src = _photos[_idx];
+  document.getElementById('lb-counter').textContent = (_idx+1) + ' / ' + _photos.length;
+}
+document.addEventListener('keydown', function(e){
+  if(!document.getElementById('lb-overlay').classList.contains('open')) return;
+  if(e.key==='Escape') lbClose();
+  if(e.key==='ArrowLeft') lbNav(-1);
+  if(e.key==='ArrowRight') lbNav(1);
+});
+</script>
+</body>
+</html>
