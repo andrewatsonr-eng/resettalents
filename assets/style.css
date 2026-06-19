@@ -222,3 +222,31 @@ textarea.cart-input{height:75px;resize:vertical;line-height:1.6;margin-bottom:0}
   .stats{grid-template-columns:repeat(3,1fr)}
   .svc-grid{grid-template-columns:1fr 1fr}
 }
+
+@media(min-width: 769px) {
+  .nav-links {
+    flex-grow: 1;
+    margin-left: 3rem;
+  }
+  .nav-cta {
+    margin-left: auto;
+  }
+  .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: var(--rgl);
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after, .nav-link.active::after {
+    width: 15px;
+  }
+}
