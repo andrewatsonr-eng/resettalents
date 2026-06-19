@@ -224,12 +224,15 @@ textarea.cart-input{height:75px;resize:vertical;line-height:1.6;margin-bottom:0}
 }
 
 @media(min-width: 769px) {
+  .nav {
+    justify-content: flex-start;
+  }
   .nav-links {
-    flex-grow: 1;
+    flex-grow: 0;
     margin-left: 0;
   }
   .nav-cta {
-    margin-left: auto;
+    margin-left: 0.5rem;
   }
   .nav-link {
     position: relative;
